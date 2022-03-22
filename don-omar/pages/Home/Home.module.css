@@ -1,0 +1,222 @@
+.contenedorPrincipal h1{
+  color: white ;
+}
+.boton {
+  margin: 1rem;
+}
+.boton button {
+  cursor: pointer;
+  padding: 0.7rem 2rem;
+  font-size: 17px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(180.52deg, #000000 -32.74%, #be202e 133.81%);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+.boton button:hover{
+  background: linear-gradient(180.52deg, #000000 -20.74%, #be202e 50.81%)
+}
+
+
+  
+    .tituloImagen {
+      position: absolute;
+      top: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      color: white;
+      background: rgba(1, 1, 1, 0.5);
+      box-shadow: 0px 4px 40px rgba(1, 1, 1, 0.4);
+      backdrop-filter: blur(60px);
+      height: 25%;
+      padding-top: 1rem;
+
+    }
+    .tituloImagen  h1 {
+      font-size: 50px;
+      margin: 10px;
+      font-weight: bolder;
+    }
+    .tituloImagen p {
+      margin-top: 0;
+      font-size: 20px;
+      max-width: 520px;
+      text-align: center;
+    }
+    .contenedorUno img {
+      width: 100%;
+      margin-top: 55px;
+    }
+  
+  .contenedorDos {
+    display: flex;
+    padding: 7rem 12rem 10rem;
+    gap: 10rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .card  span {
+    font-size: 140px;
+    color: #47973b;
+  }
+  .card  h3 {
+    font-size: 30px;
+    color: black;
+  }
+  .card p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .contenedorTres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10rem;
+  }
+  .titulo {
+    text-align: center;
+    color: black;
+
+  }
+  .titulo h1{
+    font-size: 40px;
+    color: black;
+  }
+  .titulo p{
+    font-size: 20px;
+  }
+
+  .imagenes {
+    display: flex;
+    gap: 5rem;
+    padding: 2rem 0px 0px;
+
+  }
+  .cardImg {
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 100%);
+    border-radius: 10px;
+  }
+
+  .video{
+    padding: 2rem;
+  }
+  .cardImg h3 {
+    width: 100%;
+    position: absolute;
+    color: white;
+    background: rgba(190, 32, 46, 0.9);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    height: 12%;
+    align-items: center;
+    margin: 0;
+    top: 10%;
+    font-size: 24px;
+  }
+  .cardImg img {
+    border-radius: 10px;
+  }
+
+  /* &:hover {
+    h3 {
+      top: 0;
+      height: 100%;
+      border-radius: 10px;
+    }
+  } */
+  .cardImgDos {
+    position: relative;
+    cursor: pointer;
+  }
+  .cardImgDos h3 {
+    width: 100%;
+    position: absolute;
+    color: white;
+    background: rgba(71, 151, 59, 0.9);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    height: 12%;
+    align-items: center;
+    margin: 0;
+    top: 10%;
+    font-size: 24px;
+  }
+  .cardImgDos img {
+    border-radius: 10px;
+  }
+
+  /* &:hover {
+    h3 {
+      top: 0;
+      height: 100%;
+      border-radius: 10px;
+    }
+  } */
+  .contenedorCuatro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10rem;
+
+  }
+  .titulo{
+    text-align: center;
+  }
+  .titulo h1{
+    font-size: 40px;
+  }
+  .titulo p{
+    font-size: 20px;
+  }
+  /* .video{
+    padding: 2rem;
+    iframe{
+      border-radius: 10px;
+      min-width: 900px;
+      min-height: 500px;
+    }
+  } */
+
+.contenedorCinco h1{
+  color: black;
+  text-align: center;
+}
+
+.informacion{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.infoImg{
+  display: flex;
+    width: 55%;
+    justify-content: space-around;
+}
+.info{
+  padding: 2rem;
+  width: 25%;
+}
+.info h3{
+ font-size: 30px;
+ color: black;
+
+}
+.infoImg img{
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 100%);
+}

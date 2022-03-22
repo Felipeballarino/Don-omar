@@ -1,0 +1,40 @@
+.contenedor {
+    height: 80px;
+    background: linear-gradient(260.83deg, #010101 37.97%, #be202e 241.95%);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+  }
+
+  .contenedorLeft {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+}
+.contMenu {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 18px;
+ 
+}
+
+.contMenu  a{
+    cursor: pointer;
+}
+
+  .contCart  button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.contCart  button span{
+    color: white;
+}
+  

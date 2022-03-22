@@ -1,0 +1,55 @@
+.contenedor{
+    width: 100%;
+    background: linear-gradient(260.83deg, #010101 37.97%, #be202e 241.95%);
+    height: 175px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+}
+
+.cont-uno{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+}
+.cont-uno img{
+    width: 200px;
+}
+.redes{
+    display: flex;
+    width: 100%;
+    justify-content:space-around;
+}
+.redes i{
+    font-size: 35px;
+}
+.cont-dos{
+    padding-right: 100px;
+    border-right: solid 1px white;
+}
+.cont-dos h1{
+    font-size: 20px;
+}
+.cont-dos p{
+    font-size: 16px;
+}
+.cont-tres{
+    display: flex;
+    flex-direction: column;
+
+}
+.contactenos{
+    display: flex;
+}
+.contactenos h1{
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 0px;
+}
+.contactenos p{
+    font-size: 16px;
+}
