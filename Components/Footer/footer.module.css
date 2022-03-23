@@ -1,14 +1,15 @@
 .contenedor{
     width: 100%;
     background: linear-gradient(260.83deg, #010101 37.97%, #be202e 241.95%);
-    height: 175px;
     color: white;
     display: flex;
     justify-content: space-around;
     padding: 3rem 0;
+    align-items: center;
+    margin-top: 5rem;
 }
 
-.cont-uno{
+.contUno{
     color: white;
     display: flex;
     flex-direction: column;
@@ -16,7 +17,7 @@
     gap: 2rem;
 
 }
-.cont-uno img{
+.contUno img{
     width: 200px;
 }
 .redes{
@@ -27,19 +28,27 @@
 .redes i{
     font-size: 35px;
 }
-.cont-dos{
+.contDos{
     padding-right: 100px;
     border-right: solid 1px white;
 }
-.cont-dos h1{
+.contDos h1{
     font-size: 20px;
+    color: white;
 }
-.cont-dos p{
-    font-size: 16px;
+.contDos p{
+    font-size: 13px;
 }
-.cont-tres{
+.contTres{
     display: flex;
     flex-direction: column;
+    line-height: 1;
+
+}
+
+.contTres h1{
+    font-size: 20px;
+    color: white;
 
 }
 .contactenos{
@@ -51,5 +60,5 @@
     margin-bottom: 0px;
 }
 .contactenos p{
-    font-size: 16px;
+    font-size: 13px;
 }

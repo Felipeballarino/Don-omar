@@ -26,8 +26,6 @@ const Container = (props) => {
           href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
           rel="stylesheet"
         />
-
-
       </Head>
       <Header></Header>
       <main>{props.children}</main>

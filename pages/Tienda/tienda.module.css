@@ -1,0 +1,101 @@
+.container {
+  padding: 130px 6rem 0 6rem;
+  display: flex;
+}
+.categorias {
+  width: 250px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem 0;
+}
+.categorias h1 {
+  padding: 0 1rem;
+  font-size: 20px;
+  color: #be202e;
+}
+
+.categorias ul {
+  width: 100%;
+  padding: 0 1rem;
+}
+.categorias li {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.categorias li span {
+  font-size: 16px;
+}
+
+.contCard {
+  flex-flow: row wrap;
+  padding: 0 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.card {
+  width: 320px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 30%);
+
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.infoCard {
+  padding: 1rem;
+}
+
+.infoCard h3 {
+  font-size: 18px;
+  color: #be202e;
+}
+
+.infoCard p {
+  font-size: 10px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.precioCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.precioCont p {
+  font-size: 15px;
+  letter-spacing: 7px;
+  font-weight: 700;
+}
+
+.precio span {
+  font-size: 15px;
+  color: #47973b;
+}
+
+.precio p {
+  font-size: 10px !important;
+  letter-spacing: normal;
+  font-weight: 400;
+  margin: 0;
+}

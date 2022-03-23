@@ -1,19 +1,51 @@
 import style from './head.module.css'
+import Link from 'next/link';
+import { useRouter } from 'next/router'
 
-export default function Head() {
-        return (
+import { useHistory } from "react-router-dom";
+
+
+
+const arr_nav = [
+    { titulo: "Tienda Online", url: "/Tienda", icon: "" },
+    { titulo: "Recetas", url: "/contacto", icon: "" },
+    { titulo: "Carnes de Campo", url: "/carnes", icon: "" },
+];
+let active_nav = 0;
+
+const Head = () => {
+    const router = useRouter()
+
+    const goHome = () =>{
+        router.push('/')
+    }
+
+    const goCart = () => {
+        router.push('/Carrito')
+    }
+
+
+    return (
         <>
-        <div className={style.contenedor}>
-                <div className={style.contenedorLeft}>
-                    <img src='/logotipo-donomar.png' alt="logo" />
-                    <div className={style.contMenu}>
-                        <a>Tienda online</a>
-                        <a>Recetas</a>
-                        <a>Carnes de Campo</a>
-                    </div>
-                </div>
+            <div className={style.contenedor}>
+            <img src='/logotipo-donomar.png' alt="logo" onClick={goHome} />
+                <ul className={style.contenedorLeft}>
+                    {arr_nav.map((item, index) => (
+                        <li className={style.contMenu} key={index}>
+                            <Link href={item.url}>
+                                <a
+                                    className={`nav-link ${active_nav === index ? "active" : ""
+                                        }`}
+                                    onClick={() => active_nav = index}
+                                >
+                                    {item.titulo}
+                                </a>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
                 <div className={style.contCart}>
-                    <button><span className="material-icons"> shopping_cart </span></button>
+                    <button onClick={goCart}><span className="material-icons"> shopping_cart </span></button>
                 </div>
             </div>
 
@@ -21,6 +53,8 @@ export default function Head() {
     )
 
 }
+
+export default Head;
 
 
 

@@ -10,22 +10,29 @@
     z-index: 100;
   }
 
+  .contenedor img{
+    cursor: pointer;
+    width: 190px;
+  }
+
   .contenedorLeft {
     display: flex;
     align-items: center;
     width: 50%;
+    margin-bottom: 0;
+    padding: 0;
 
 }
 .contMenu {
   display: flex;
   width: 100%;
-  justify-content: space-around;
   font-size: 18px;
  
 }
 
 .contMenu  a{
     cursor: pointer;
+    color: white;
 }
 
   .contCart  button{

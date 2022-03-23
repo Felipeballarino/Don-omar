@@ -1,15 +1,16 @@
 import styles from "./Home.module.css";
 import YouTube from "react-youtube";
+import Container from "../../components/Container";
 
 const Home = () => {
 
 
-  const _onReady = (event)=> {
-    event.target.pauseVideo();
-  }
+  // const _onReady = (event)=> {
+  //   event.target.pauseVideo();
+  // }
 
   return (
-    <>
+    <Container>
       <div className={styles.contenedorPrincipal}>
         <div className={styles.contenedorUno}>
           <div className={styles.tituloImagen}>
@@ -63,7 +64,7 @@ const Home = () => {
               <h3>NOVILLO</h3>
               <img src="media/carne.png" alt="novillo" />
             </div>
-            <div className={styles.cardImgDos}>
+            <div className={styles.cardImg}>
               <h3>CERDO</h3>
               <img src="media/carne.png" alt="novillo" />
             </div>
@@ -71,7 +72,7 @@ const Home = () => {
               <h3>POLLO</h3>
               <img src="media/carne.png" alt="novillo" />
             </div>
-            <div className={styles.cardImgDos}>
+            <div className={styles.cardImg}>
               <h3>ACHURAS</h3>
               <img src="media/carne.png" alt="novillo" />
             </div>
@@ -170,8 +171,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-    </>
+    </Container>
   );
 };
 
