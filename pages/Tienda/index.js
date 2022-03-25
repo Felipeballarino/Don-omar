@@ -1,118 +1,73 @@
-import Container from "../../components/Container";
-import styles from './tienda.module.css'
+import styles from "./tienda.module.css";
 import Head from "next/head";
+import Image from "next/image";
 
+const arr_card = [0, 1, 2, 3, 4, 5, 6, 7];
+const arr_categs = [
+  { nombre: "Vacuno", icon: "" },
+  { nombre: "Cerdo", icon: "" },
+  { nombre: "Pollo", icon: "" },
+  { nombre: "Achuras", icon: "" },
+  { nombre: "Embutidos", icon: "" },
+  { nombre: "Fiambres", icon: "" },
+  { nombre: "Corte x unidad", icon: "" },
+  { nombre: "Elaborados", icon: "" },
+  { nombre: "Cordero", icon: "" },
+  { nombre: "Otros", icon: "" },
+];
 const Tienda = () => {
-    return (
-        <Container>
-            <Head>
-                <title>Don Omar | Tienda Online</title>
-            </Head>
-            <div className={styles.container}>
-                <div className={styles.categorias}>
-                    <h1>Categorias </h1>
-                    <ul>
-                        <li><span>Vacuno</span><span class="material-icons icon"> arrow_forward_ios </span></li>
-                        <li><span>Cerdo</span><span class="material-icons icon"> arrow_forward_ios </span></li>
-                        <li><span>Pollo</span><span class="material-icons icon"> arrow_forward_ios </span></li>
-                        <li><span>Achuras</span><span class="material-icons icon"> arrow_forward_ios </span></li>
-                        <li><span>Embutidos</span><span class="material-icons icon"> arrow_forward_ios </span></li>
-                        <li><span>Fiambres</span><span class="material-icons icon"> arrow_forward_ios </span></li>
-                        <li><span>Corte x unidad</span><span class="material-icons icon"> arrow_forward_ios </span></li>
-                        <li><span>Elaborados</span><span class="material-icons icon"> arrow_forward_ios </span></li>
-                        <li><span>Cordero</span><span class="material-icons icon"> arrow_forward_ios </span></li>
-                        <li><span>Otros</span><span class="material-icons icon"> arrow_forward_ios </span></li>
-                    </ul>
+  return (
+    <>
+      <Head>
+        <title>Don Omar | Tienda Online</title>
+      </Head>
+      <div className={styles.container}>
+        <div className={styles.categorias}>
+          <h1>Categorias </h1>
+          <ul>
+            {arr_categs.map((item, index) => (
+              <li key={index}>
+                <span>{item.nombre}</span>
+                <span className="material-icons icon"> arrow_forward_ios </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={styles.contCard}>
+          {arr_card.map((item, index) => (
+            <div className={styles.card} key={index}>
+              <Image
+                src="/media/Photo.jpg"
+                alt={item}
+                width="100%"
+                height="100%"
+                layout="responsive"
+                objectFit="contain"
+                priority="false"
+              />
+              <div className={styles.infoCard}>
+                <h3>NOMBRE DEL CORTE</h3>
+                <div className={styles.precioCont}>
+                  <div className={styles.precio}>
+                    <p>
+                      <span>$ 1500</span> x un
+                    </p>
+                    <p>Precio Aproximado</p>
+                  </div>
+                  <div className={styles.cantidad}>
+                    <span> - </span>
+                    <span> 1 </span>
+                    <span> + </span>
+                  </div>
                 </div>
-                <div className={styles.contCard}>
-                    <div className={styles.card}>
-                        <img src="media/Photo.jpg" alt="fotocard" />
-                        <div className={styles.infoCard}>
-                            <h3>NOMBRE DEL CORTE</h3>
-                            <div className={styles.precioCont}>
-                                <div className={styles.precio}>
-                                    <span>$ 1500 x un</span>
-                                    <p>Precio Estimado</p>
-                                </div>
-                                <p> + 1 -</p>
-                            </div>
-                            <p>La unidad de este producto oscila entre *0.9 y 1.2 kg.</p>
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <img src="media/Photo.jpg" alt="fotocard" />
-                        <div className={styles.infoCard}>
-                            <h3>NOMBRE DEL CORTE</h3>
-                            <div className={styles.precioCont}>
-                                <div className={styles.precio}>
-                                    <span>$ 1500 x un</span>
-                                    <p>Precio Estimado</p>
-                                </div>
-                                <p> + 1 -</p>
-                            </div>
-                            <p>La unidad de este producto oscila entre *0.9 y 1.2 kg.</p>
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <img src="media/Photo.jpg" alt="fotocard" />
-                        <div className={styles.infoCard}>
-                            <h3>NOMBRE DEL CORTE</h3>
-                            <div className={styles.precioCont}>
-                                <div className={styles.precio}>
-                                    <span>$ 1500 x un</span>
-                                    <p>Precio Estimado</p>
-                                </div>
-                                <p> + 1 -</p>
-                            </div>
-                            <p>La unidad de este producto oscila entre *0.9 y 1.2 kg.</p>
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <img src="media/Photo.jpg" alt="fotocard" />
-                        <div className={styles.infoCard}>
-                            <h3>NOMBRE DEL CORTE</h3>
-                            <div className={styles.precioCont}>
-                                <div className={styles.precio}>
-                                    <span>$ 1500 x un</span>
-                                    <p>Precio Estimado</p>
-                                </div>
-                                <p> + 1 -</p>
-                            </div>
-                            <p>La unidad de este producto oscila entre *0.9 y 1.2 kg.</p>
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <img src="media/Photo.jpg" alt="fotocard" />
-                        <div className={styles.infoCard}>
-                            <h3>NOMBRE DEL CORTE</h3>
-                            <div className={styles.precioCont}>
-                                <div className={styles.precio}>
-                                    <span>$ 1500 x un</span>
-                                    <p>Precio Estimado</p>
-                                </div>
-                                <p> + 1 -</p>
-                            </div>
-                            <p>La unidad de este producto oscila entre *0.9 y 1.2 kg.</p>
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <img src="media/Photo.jpg" alt="fotocard" />
-                        <div className={styles.infoCard}>
-                            <h3>NOMBRE DEL CORTE</h3>
-                            <div className={styles.precioCont}>
-                                <div className={styles.precio}>
-                                    <span>$ 1500 x un</span>
-                                    <p>Precio Estimado</p>
-                                </div>
-                                <p> + 1 -</p>
-                            </div>
-                            <p>La unidad de este producto oscila entre *0.9 y 1.2 kg.</p>
-                        </div>
-                    </div>
-                </div>
+                <p>La unidad de este producto oscila entre *0.9 y 1.2 kg.</p>
+              </div>
             </div>
-        </Container>
-    );
-}
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Tienda;
