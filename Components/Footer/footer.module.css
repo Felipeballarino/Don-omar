@@ -1,6 +1,6 @@
 .contenedor{
     width: 100%;
-    background: linear-gradient(260.83deg, #010101 37.97%, #be202e 241.95%);
+    background: linear-gradient(260.83deg, #010101 37.97%, var(--color-red) 241.95%);
     color: white;
     display: flex;
     justify-content: space-around;

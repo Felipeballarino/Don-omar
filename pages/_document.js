@@ -1,18 +1,12 @@
-import Head from "next/head";
-import Header from './Head'
-import Footer from './Footer'
+import { Html, Head, Main, NextScript } from "next/document";
 
-const Container = (props) => {
+export default function Document() {
   return (
-    <>
+    <Html>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <line rel="preconnect" href="https://unpkg.com" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css"
-        />
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
           rel="stylesheet"
@@ -26,12 +20,12 @@ const Container = (props) => {
           href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
           rel="stylesheet"
         />
-      </Head>
-      <Header></Header>
-      <main>{props.children}</main>
-      <Footer></Footer>
-    </>
-  );
-};
 
-export default Container;
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
+}

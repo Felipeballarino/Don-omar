@@ -1,0 +1,21 @@
+.boton {
+  margin: 1rem;
+}
+.boton button {
+  cursor: pointer;
+  padding: 0.7rem 2rem;
+  font-size: 17px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(145.52deg, #000000 -32.74%, #be202e 238.81%);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border: none;
+  transition: all var(--timer-animation);
+}
+.boton button:hover {
+  background: linear-gradient(
+    180.52deg,
+    #000000 -20.74%,
+    var(--color-red) 50.81%
+  );
+}

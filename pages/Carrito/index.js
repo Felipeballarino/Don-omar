@@ -1,14 +1,12 @@
-import Container from "../../components/Container";
-import styles from './carrito.module.css'
+
+import styles from "./carrito.module.css";
 
 const Carrito = () => {
-    return (  
-        <Container>
-            <div className={styles.conteiner}>
+  return (
+    <>
+      <div className={styles.conteiner}></div>
+    </>
+  );
+};
 
-            </div>
-        </Container>
-    );
-}
- 
 export default Carrito;
