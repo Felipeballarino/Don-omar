@@ -27,6 +27,7 @@
 }
 .redes i{
     font-size: 35px;
+    color: white;
 }
 .contDos{
     padding-right: 100px;
@@ -38,6 +39,7 @@
 }
 .contDos p{
     font-size: 13px;
+    color: white;
 }
 .contTres{
     display: flex;
@@ -49,16 +51,14 @@
 .contTres h1{
     font-size: 20px;
     color: white;
+    margin-bottom: 0px ;
 
 }
 .contactenos{
     display: flex;
 }
-.contactenos h1{
-    font-size: 20px;
-    width: 100%;
-    margin-bottom: 0px;
-}
+
 .contactenos p{
     font-size: 13px;
+    color: white;
 }
