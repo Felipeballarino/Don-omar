@@ -1,3 +1,15 @@
 .conteiner{
     height: 57vh;
+    display: flex;
+    align-items: center;
+justify-content: center
+}
+
+
+.contCarro{
+    border: black solid 2px;
+    width: 900px;
+    height: 200px;
+
+    
 }
