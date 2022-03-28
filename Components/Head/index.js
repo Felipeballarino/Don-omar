@@ -17,9 +17,8 @@ const Head = () => {
     router.push("/");
   };
 
-  const goCart = () => {
-    router.push("/Carrito");
-  };
+  
+
 
   return (
     <>
@@ -50,9 +49,9 @@ const Head = () => {
           ))}
         </ul>
         <div className={style.contCart}>
-          <button onClick={goCart}>
+          <Link href="/Carrito" className={style.btnCart}>
             <span className="material-icons"> shopping_cart </span>
-          </button>
+          </Link>   
         </div>
       </div>
     </>

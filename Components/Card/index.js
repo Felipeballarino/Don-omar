@@ -1,20 +1,27 @@
 import styles from './card.module.css'
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { addCard } from '../../Actions';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 
 
 const Card = (item) => {
   const dispatch = useDispatch()
   const [input, setInput] = useState({
+    id:item.index,
+    img:"/media/Photo.jpg",
     nombre: "NOMBRE DEL CORTE",
     precio: '1500',
-    count: 1
+    count: 1,
+    addCard: false
   })
 
   const handlerSubmit = () => {
+    setInput({
+      ...input,
+      addCard: !input.addCard
+    })
     dispatch(addCard(input))
   }
 
@@ -37,12 +44,20 @@ const Card = (item) => {
     <>
       <div className={styles.card}>
         <button className={styles.carro} onClick={handlerSubmit}>
-          <span className="material-icons">
-            shopping_cart
-          </span>
+          {
+            input.addCard ?
+              <span className="material-icons" title='Eliminar del carrito'>
+                remove_shopping_cart
+              </span>
+              :
+              <span className="material-icons" title='Agregar al carrito'> 
+                shopping_cart
+              </span>
+          }
+
         </button>
         <Image
-          src="/media/Photo.jpg"
+          src={input.img}
           alt={item}
           width="100%"
           height="100%"

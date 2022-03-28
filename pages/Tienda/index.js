@@ -42,7 +42,7 @@ const Tienda = () => {
         </div>
         <div className={styles.contCard}>
           {arr_card.map((item, index) => (
-            <Card item = {item} key={index} />
+            <Card item = {item} index={index} key={index} />
           ))}
         </div>
       </div>

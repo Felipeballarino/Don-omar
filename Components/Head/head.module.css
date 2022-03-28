@@ -35,13 +35,11 @@
     color: white;
 }
 
-  .contCart  button{
-    background-color: transparent;
-    border: none;
+.contCart span{
+    color: white;
     cursor: pointer;
+
 }
 
-.contCart  button span{
-    color: white;
-}
+
   
