@@ -1,15 +1,135 @@
-.conteiner{
-    height: 57vh;
-    display: flex;
-    align-items: center;
-justify-content: center
+
+.conteiner {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+}
+
+.contCarro {
+  width: 60%;
+  height: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 50%);
+  padding: 1rem;
 }
 
 
-.contCarro{
-    border: black solid 2px;
-    width: 900px;
-    height: 200px;
 
-    
+.headCart {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid black;
+}
+
+.headCart li {
+  color: var(--color-red);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.productos{
+  width: 25%;
+}
+
+.unidades {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  list-style: none;
+  border-bottom: 1px solid black;
+  min-height: 50px;
+  align-items: center;
+
+
+}
+
+.imagen {
+  width: 45px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 50%);
+  margin-right: 1rem;
+}
+
+.nombreImg {
+  display: flex;
+  align-items: center;
+}
+
+.cantidad {
+  padding-left: 4%;
+}
+
+.precio {
+  color: #47973b;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.eliminar {
+  width: 5%;
+  text-align: center;
+}
+
+.eliminar button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer span {
+  width: 50%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #be202e;
+}
+
+/* .total{
+  line-height: 1px
+} */
+.total h1 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #47973b;
+  margin: 0px;
+}
+
+.total p {
+  margin: 0px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #51514f;
+}
+.boton button {
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.boton p {
+  font-size: 15px !important;
+  color: white !important;
+  line-height: auto;
+  margin: 0;
+}
+.boton span {
+  font-size: 25px;
+  color: white !important;
+  width: auto !important;
+  margin: 2px;
 }
