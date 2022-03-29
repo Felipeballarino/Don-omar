@@ -1,11 +1,13 @@
 import styles from "./tienda.module.css";
 import Head from "next/head";
 import Card from '../../Components/Card'
+import {  useSelector } from 'react-redux';
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 
 
-const arr_card = [0, 1, 2, 3, 4, 5, 6, 7];
 const arr_categs = [
   { nombre: "Vacuno", icon: "" },
   { nombre: "Cerdo", icon: "" },
@@ -21,10 +23,15 @@ const arr_categs = [
 
 
 const Tienda = () => {
+  const state = useSelector(state => state.productos)
+
+
+  const router = useRouter()
 
 
   return (
     <>
+  
       <Head>
         <title>Don Omar | Tienda Online</title>
       </Head>
@@ -41,8 +48,14 @@ const Tienda = () => {
           </ul>
         </div>
         <div className={styles.contCard}>
-          {arr_card.map((item, index) => (
-            <Card item = {item} index={index} key={index} />
+          {state.map((item, index) => (
+            // <Link href={`/Tienda/${item.id}`}>
+            //   <Card item = {item} index={index} key={index} />
+            // </Link>
+            <div onClick={() =>{router.push(`/Producto/${item.id}`)}}>
+              <Card item = {item} index={index} key={index} />
+            </div>
+    
           ))}
         </div>
       </div>

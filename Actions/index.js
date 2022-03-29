@@ -24,3 +24,18 @@ export const deleteCart = (payload) =>{
         }
     }
 }
+
+export const getProductForId = (payload)=>{
+    return (dispatch)=>{
+        try{
+            return dispatch ({
+                type:"GET_PRODUCT_FOR_ID",
+                payload:payload
+            }) 
+        }catch(error){
+            console.log(error)
+            
+        }
+    }
+
+}
