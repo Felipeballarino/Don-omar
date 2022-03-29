@@ -32,7 +32,7 @@ const Carrito = () => {
                 <li className={styles.cantidad}>{d.count} Kg</li>
                 <li className={styles.precio}>${d.precio}</li>
                 <li className={styles.eliminar}>
-                  <button onClick={console.log('hoal')} >
+                  <button onClick={()=>eliminarCart(d.id)} >
                     <span className="material-icons">close</span>
                   </button>
                 </li>
