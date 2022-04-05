@@ -1,14 +1,14 @@
 import styles from "./tienda.module.css";
 import Head from "next/head";
-import Card from '../../Components/Card'
-import {  useSelector } from 'react-redux';
-import Link from "next/link";
-import { useRouter } from "next/router";
-
+import Card from '../../../Components/Card'
+import { useDispatch, useSelector } from 'react-redux';
+import { filterCateg, consumirJSON } from "../../../Redux/Actions";
+import { useEffect } from "react";
 
 
 
 const arr_categs = [
+  { nombre: "Todas", icon: "" },
   { nombre: "Vacuno", icon: "" },
   { nombre: "Cerdo", icon: "" },
   { nombre: "Pollo", icon: "" },
@@ -21,17 +21,27 @@ const arr_categs = [
   { nombre: "Otros", icon: "" },
 ];
 
+let nav_arr = 0
 
 const Tienda = () => {
-  const state = useSelector(state => state.productos)
+  const state = useSelector(state => state.filtrado)
+  const dispatch = useDispatch()
 
 
-  const router = useRouter()
+  const handlerFilter = (categ, index) => {
+    nav_arr = index
+    dispatch(filterCateg(categ,index))
+  }
+
+  useEffect(() => {
+    if (!state.length) {
+      dispatch(consumirJSON())
+    }
+  }, [dispatch])
 
 
   return (
     <>
-  
       <Head>
         <title>Don Omar | Tienda Online</title>
       </Head>
@@ -40,22 +50,16 @@ const Tienda = () => {
           <h1>Categorias </h1>
           <ul>
             {arr_categs.map((item, index) => (
-              <li key={index}>
-                <span>{item.nombre}</span>
-                <span className="material-icons icon"> arrow_forward_ios </span>
+              <li key={index} onClick={() => handlerFilter(item.nombre, index)} className={nav_arr === index? styles.active : ""}>
+                <span>{item.nombre}</span>      
+                  <span className="material-icons icon"> arrow_forward_ios </span>
               </li>
             ))}
           </ul>
         </div>
         <div className={styles.contCard}>
           {state.map((item, index) => (
-            // <Link href={`/Tienda/${item.id}`}>
-            //   <Card item = {item} index={index} key={index} />
-            // </Link>
-            <div onClick={() =>{router.push(`/Producto/${item.id}`)}}>
-              <Card item = {item} index={index} key={index} />
-            </div>
-    
+            <Card item={item} index={index} key={index} />
           ))}
         </div>
       </div>

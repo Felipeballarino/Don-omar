@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 
 import React from 'react';
 import { Provider } from 'react-redux';
-import Store from '../Store/index'
+import Store from '../Redux/Store/index'
 
 
 const MyApp = ({ Component, pageProps }) => {
