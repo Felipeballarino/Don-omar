@@ -2,16 +2,18 @@ import style from "./head.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 
 const arr_nav = [
   { titulo: "Tienda Online", url: "/Client/Tienda", icon: "" },
-  { titulo: "Recetas", url: "/Client/contacto", icon: "" },
+  { titulo: "Recetas", url: "/Client/Recetas", icon: "" },
   { titulo: "Carnes de Campo", url: "/Client/carnes", icon: "" },
 ];
 let active_nav = 0;
 
 const Head = () => {
   const router = useRouter();
+  const state = useSelector(state => state.carrito)
 
   const goHome = () => {
     router.push("/");
@@ -23,6 +25,10 @@ const Head = () => {
   return (
     <>
       <div className={style.contenedor}>
+    {state.length?
+    <div className={style.cantidadCart}>
+      <p>{state.length}</p>
+    </div> : ""}
         <div className={style.img}>
           <Image
             src="/logotipo-donomar.png"

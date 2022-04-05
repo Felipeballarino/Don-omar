@@ -46,6 +46,7 @@ const Tienda = () => {
 
   return (
     <>
+    {console.log(state)}
       <Head>
         <title>Don Omar | Tienda Online</title>
       </Head>
