@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useDispatch, useSelector } from 'react-redux';
 
 
-const Card = ({ item }) => {
+const Card = ({ item, check }) => {
   const dispatch = useDispatch()
   const router = useRouter()
   const state = useSelector(state => state.carrito)
@@ -46,11 +46,10 @@ const Card = ({ item }) => {
   }
   return (
     <>
-      {console.log(state.map(e=> e.id == contenido.id))}
       <div className={styles.card}>
         <button className={styles.carro} >
           {
-            contenido.addCard ?
+            check ?
               <span className="material-icons" title='Eliminar del carrito' onClick={() => eliminarCarrito(contenido.id)}>
                 remove_shopping_cart
               </span>
