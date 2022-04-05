@@ -25,6 +25,7 @@ let nav_arr = 0
 
 const Tienda = () => {
   const state = useSelector(state => state.filtrado)
+  const state_carrito = useSelector(state => state.carrito);
   const dispatch = useDispatch()
 
 
@@ -39,6 +40,9 @@ const Tienda = () => {
     }
   }, [dispatch])
 
+  const checkProduct = (producto) => {
+    return state_carrito.find(e => e.id === producto.id) ? true : false;
+  }
 
   return (
     <>
@@ -59,7 +63,7 @@ const Tienda = () => {
         </div>
         <div className={styles.contCard}>
           {state.map((item, index) => (
-            <Card item={item} index={index} key={index} />
+            <Card item={item} index={index} key={index} check={checkProduct(item)} />
           ))}
         </div>
       </div>

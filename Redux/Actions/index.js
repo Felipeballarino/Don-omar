@@ -5,7 +5,7 @@ export const consumirJSON = () => {
     return (dispatch) => {
        
         try{
-            axios.get('http://localhost:3000/api/hello')
+            axios.get('http://localhost:3001/api/hello')
             .then (response => response.data)
             .then(response =>dispatch({
                 type: "CARGAR_DATOS",
