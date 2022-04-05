@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 const arr_nav = [
-  { titulo: "Tienda Online", url: "/Tienda", icon: "" },
-  { titulo: "Recetas", url: "/contacto", icon: "" },
-  { titulo: "Carnes de Campo", url: "/carnes", icon: "" },
+  { titulo: "Tienda Online", url: "/Client/Tienda", icon: "" },
+  { titulo: "Recetas", url: "/Client/contacto", icon: "" },
+  { titulo: "Carnes de Campo", url: "/Client/carnes", icon: "" },
 ];
 let active_nav = 0;
 
@@ -39,7 +39,7 @@ const Head = () => {
             <li className={style.contMenu} key={index}>
               <Link href={item.url}>
                 <a
-                  className={`nav-link ${active_nav === index ? "active" : ""}`}
+                  className={active_nav === index ? "style.active ": style.inactive}
                   onClick={() => (active_nav = index)}
                 >
                   {item.titulo}
@@ -49,7 +49,7 @@ const Head = () => {
           ))}
         </ul>
         <div className={style.contCart}>
-          <Link href="/Carrito" className={style.btnCart}>
+          <Link href="/Client/Carrito" className={style.btnCart}>
             <span className="material-icons"> shopping_cart </span>
           </Link>   
         </div>

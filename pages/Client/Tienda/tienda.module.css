@@ -45,3 +45,7 @@ color: var(--color-red);}
   gap: 2rem;
 }
 
+.active span{
+  color: var(--color-red);
+  font-weight: 500;
+}

@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Vacuno",
+        "addCard": false
+      },
+      {
+        "id": 2,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Vacuno",
+        "addCard": false
+      },
+      {
+        "id": 3,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Cerdo",
+        "addCard": false
+      },
+      {
+        "id": 4,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Cerdo",
+        "addCard": false
+      },
+      {
+        "id": 5,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Cerdo",
+        "addCard": false
+      },
+      {
+        "id": 6,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Cerdo",
+        "addCard": false
+      },
+      {
+        "id": 7,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Pollo",
+        "addCard": false
+      },
+      {
+        "id": 8,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Pollo",
+        "addCard": false
+      },
+      {
+        "id": 9,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Achuras",
+        "addCard": false
+      },
+      {
+        "id": 10,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Achuras",
+        "addCard": false
+      },
+      {
+        "id": 11,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Embutidos",
+        "addCard": false
+      },
+      {
+        "id": 12,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Embutidos",
+        "addCard": false
+      }  
+]

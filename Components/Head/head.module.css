@@ -40,6 +40,17 @@
     cursor: pointer;
 
 }
+.active{
+  padding-bottom: 5px;
+  font-weight: 500;
+  border-bottom: 1px solid white;
+}
+
+.inactive{
+  border-bottom: none !important;
+
+}
+
 
 
   
