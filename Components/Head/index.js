@@ -19,16 +19,13 @@ const Head = () => {
     router.push("/");
   };
 
-  
+
 
 
   return (
     <>
       <div className={style.contenedor}>
-    {state.length?
-    <div className={style.cantidadCart}>
-      <p>{state.length}</p>
-    </div> : ""}
+
         <div className={style.img}>
           <Image
             src="/logotipo-donomar.png"
@@ -45,7 +42,7 @@ const Head = () => {
             <li className={style.contMenu} key={index}>
               <Link href={item.url}>
                 <a
-                  className={active_nav === index ? "style.active ": style.inactive}
+                  className={active_nav === index ? "style.active " : style.inactive}
                   onClick={() => (active_nav = index)}
                 >
                   {item.titulo}
@@ -57,7 +54,11 @@ const Head = () => {
         <div className={style.contCart}>
           <Link href="/Client/Carrito" className={style.btnCart}>
             <span className="material-icons"> shopping_cart </span>
-          </Link>   
+          </Link>
+          {state.length ?
+            <div className={style.cantidadCart}>
+              <p>{state.length}</p>
+            </div> : ""}
         </div>
       </div>
     </>

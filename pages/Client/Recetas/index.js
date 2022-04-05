@@ -14,7 +14,6 @@ const Recetas = () => {
     }
 
     const _onReady = event => {
-        console.log("_onReady");
         cElement = event;
          event.target.playVideo();
       };

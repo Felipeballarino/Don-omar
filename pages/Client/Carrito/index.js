@@ -9,18 +9,17 @@ import { useState, useEffect } from "react";
 
 
 const Carrito = () => {
-  const state = useSelector(state => state.carrito)
-
+  const state = useSelector(state => state.carrito) 
   const dispatch = useDispatch()
   const [total, setTotal] = useState(0)
-  const cantidadTotal = 0
+  const precioTotal = 0
 
   useEffect(() => {
     state.map(e=>{
-      cantidadTotal = cantidadTotal + e.count
+      precioTotal =precioTotal + (e.precio * e.count)
     });
     setTotal(
-      state.reduce((a, b) => a + b.precio, 0) * cantidadTotal
+      precioTotal
       ), [dispatch]
 })
 
@@ -31,7 +30,6 @@ const eliminarCart = (id) => {
 
 return (
   <>
-  {console.log(total  , "tas")}
     <div className={styles.conteiner}>
 
       <div className={styles.contCarro}>

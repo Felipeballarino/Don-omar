@@ -14,21 +14,23 @@
   z-index: 100;
 }
 .cantidadCart {
-  position: absolute;
   background-color: green;
   height: auto;
   display: flex;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   align-items: center;
   justify-content: center;
-  right: 10%;
-  }
-  .cantidadCart p {
-    margin: 0;
-    color: white;
-  }
+  font-size: 10px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 3px solid black;
+}
+.cantidadCart p {
+  margin: 0;
+  color: white;
+}
 .contenedor .img {
   cursor: pointer;
   width: 190px;
@@ -51,7 +53,9 @@
   cursor: pointer;
   color: white;
 }
-
+.contCart {
+  display: flex;
+}
 .contCart span {
   color: white;
   cursor: pointer;

@@ -1,29 +1,28 @@
-// import json from './productos.json'
- import axios from 'axios'
+import json from './productos.json'
+// import axios from 'axios'
 
 export const consumirJSON = () => {
     return (dispatch) => {
-       
-        try{
-            axios.get('http://localhost:3001/api/hello')
-            .then (response => response.data)
-            .then(response =>dispatch({
+        //     try{
+        //         axios.get('http://localhost:3001/api/hello')
+        //         .then (response => response.data)
+        //         .then(response =>dispatch({
+        //             type: "CARGAR_DATOS",
+        //             payload: response
+        //         }))
+        //     }catch(error){
+        //         console.log(error)  
+        //     }
+        // }
+        try {
+            return dispatch({
                 type: "CARGAR_DATOS",
-                payload: response
-            }))
-        }catch(error){
+                payload: json
+            })
+        } catch (error) {
             console.log(error)
-           
         }
     }
-     // try {
-        //     return dispatch({
-        //         type: "CARGAR_DATOS",
-        //         payload: json
-        //     })
-        // } catch (error) {
-        //     console.log(error) 
-        // }
 }
 
 export const addCard = (payload) => {
@@ -66,37 +65,8 @@ export const getProductForId = (payload) => {
         }
     }
 }
-
-export const addStado = (payload) => {
-    return (dispatch) => {
-        try {
-            return dispatch({
-                type: "ADD_STATE",
-                payload: payload
-            })
-        } catch (error) {
-            console.log(error)
-
-        }
-    }
-
-}
-export const deleteStado = (payload) => {
-    return (dispatch) => {
-        try {
-            return dispatch({
-                type: "DELETE_STATE",
-                payload: payload
-            })
-        } catch (error) {
-            console.log(error)
-
-        }
-    }
-
-}
-export const filterCateg = (categ,index) => {
-    const payload = {categ, index}
+export const filterCateg = (categ, index) => {
+    const payload = { categ, index }
     console.log(payload)
     return (dispatch) => {
         try {
