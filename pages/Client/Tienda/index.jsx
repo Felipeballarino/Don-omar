@@ -4,6 +4,8 @@ import Card from '../../../Components/Card'
 import { useDispatch, useSelector } from 'react-redux';
 import { filterCateg, consumirJSON } from "../../../Redux/Actions";
 import { useEffect } from "react";
+import Paginado from "../../../Components/Paginado";
+import { useState } from "react";
 
 
 
@@ -28,10 +30,21 @@ const Tienda = () => {
   const state_carrito = useSelector(state => state.carrito);
   const dispatch = useDispatch()
 
+  //PAGINADO
+  const [currentPage, setCurrentPage] = useState(1)
+  const [productPerPage, _setProductPerPage] = useState(6)
+  const indexOfLastProduct = currentPage * productPerPage;// 6
+  const indexOfFirstProduct = indexOfLastProduct - productPerPage;//0
+  const currentProduct = state.slice(indexOfFirstProduct, indexOfLastProduct)
+
+  const paginado = (pageNumber)=>{
+    setCurrentPage (pageNumber) 
+}
+
 
   const handlerFilter = (categ, index) => {
     nav_arr = index
-    dispatch(filterCateg(categ,index))
+    dispatch(filterCateg(categ, index))
   }
 
   useEffect(() => {
@@ -50,21 +63,25 @@ const Tienda = () => {
         <title>Don Omar | Tienda Online</title>
       </Head>
       <div className={styles.container}>
+        <Paginado
+          productPerPage={productPerPage}
+          allProduct={state.length}
+          paginado={paginado}></Paginado>
         <div className={styles.categorias}>
           <h1>Categorias </h1>
           <ul>
             {arr_categs.map((item, index) => (
-              <li key={index} onClick={() => handlerFilter(item.nombre, index)} className={nav_arr === index? styles.active : ""}>
-                <span>{item.nombre}</span>      
-                  <span className="material-icons icon"> arrow_forward_ios </span>
+              <li key={index} onClick={() => handlerFilter(item.nombre, index)} className={nav_arr === index ? styles.active : ""}>
+                <span>{item.nombre}</span>
+                <span className="material-icons icon"> arrow_forward_ios </span>
               </li>
             ))}
           </ul>
         </div>
         <div className={styles.contCard}>
-          {state.map((item, index) => (
+          {currentProduct ? currentProduct.map((item, index) => (
             <Card item={item} index={index} key={index} check={checkProduct(item)} />
-          ))}
+          )):""}
         </div>
       </div>
     </>

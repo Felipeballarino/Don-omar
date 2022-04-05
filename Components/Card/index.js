@@ -1,7 +1,7 @@
 import styles from './card.module.css'
 import React, { useState } from "react";
 import Image from "next/image";
-import { addCard, addStado, deleteCart, deleteStado, changeCount } from '../../Redux/Actions';
+import { addCard,  deleteCart } from '../../Redux/Actions';
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 const Card = ({ item, check }) => {
   const dispatch = useDispatch()
   const router = useRouter()
-  const state = useSelector(state => state.carrito)
   const [contenido, setContenido] = useState({
     id: item.id,
     img: item.img,
@@ -22,12 +21,10 @@ const Card = ({ item, check }) => {
 
 
   const agregarCarrito = (id) => {
-    dispatch(addStado(id))
     dispatch(addCard(contenido))
   }
 
   const eliminarCarrito = (id) => {
-    dispatch(deleteStado(id))
     dispatch(deleteCart(id))
   }
 

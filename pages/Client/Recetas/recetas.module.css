@@ -1,0 +1,14 @@
+.contenedor{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem;
+}
+
+.videoPrincipal{
+    width: 70%;
+}
+
+.videoPrincipal Youtube {
+    width: 100%;
+}

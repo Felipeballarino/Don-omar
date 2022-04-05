@@ -5,8 +5,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Vacuno",
-        "addCard": false
+        "categoria":"Vacuno"
       },
       {
         "id": 2,
@@ -14,8 +13,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Vacuno",
-        "addCard": false
+        "categoria":"Vacuno"
       },
       {
         "id": 3,
@@ -23,8 +21,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cerdo",
-        "addCard": false
+        "categoria":"Cerdo"
       },
       {
         "id": 4,
@@ -32,8 +29,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cerdo",
-        "addCard": false
+        "categoria":"Cerdo"
       },
       {
         "id": 5,
@@ -41,8 +37,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cerdo",
-        "addCard": false
+        "categoria":"Cerdo"
       },
       {
         "id": 6,
@@ -50,8 +45,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cerdo",
-        "addCard": false
+        "categoria":"Cerdo" 
       },
       {
         "id": 7,
@@ -59,8 +53,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Pollo",
-        "addCard": false
+        "categoria":"Pollo"  
       },
       {
         "id": 8,
@@ -68,8 +61,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Pollo",
-        "addCard": false
+        "categoria":"Pollo"  
       },
       {
         "id": 9,
@@ -77,8 +69,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Achuras",
-        "addCard": false
+        "categoria":"Achuras"
       },
       {
         "id": 10,
@@ -86,8 +77,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Achuras",
-        "addCard": false
+        "categoria":"Achuras"  
       },
       {
         "id": 11,
@@ -95,8 +85,7 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Embutidos",
-        "addCard": false
+        "categoria":"Embutidos"  
       },
       {
         "id": 12,
@@ -104,7 +93,38 @@
         "nombre": "Producto 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Embutidos",
-        "addCard": false
+        "categoria":"Embutidos"
+      }  
+      {
+        "id": 13,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Fiambres"
+      },
+      {
+        "id": 14,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Fiambres"  
+      },
+      {
+        "id": 15,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Elaborados"  
+      },
+      {
+        "id": 16,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Cordero"
       }  
 ]

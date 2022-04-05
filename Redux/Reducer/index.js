@@ -36,24 +36,7 @@ const Reducer = (state = initialState, { type, payload }) => {
         ...state,
         detalles: state.productos.filter(e => e.id == (+payload))
       }
-    case "ADD_STATE":
-
-      return {
-        ...state,
-        filtrado:  state.filtrado.map(e => e.id == (+payload) ? {
-          ...e,
-          addCard: true
-        } : e),
-
-      }
-    case "DELETE_STATE":
-      return {
-        ...state,
-        filtrado: state.filtrado.map(e => e.id == (+payload) ? {
-          ...e,
-          addCard: false
-        } : e)
-      }
+    
     case "FILTER_CATEG":
       return {
         ...state,
