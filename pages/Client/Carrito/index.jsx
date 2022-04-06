@@ -25,7 +25,6 @@ const Carrito = () => {
 
 const eliminarCart = (id) => {
   dispatch(deleteCart(id))
-  dispatch(deleteStado(id))
 }
 
 return (
