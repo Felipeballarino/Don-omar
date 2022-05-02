@@ -94,7 +94,7 @@
         "precio": 1500,
         "count": 1,
         "categoria":"Embutidos"
-      }  
+      }  ,
       {
         "id": 13,
         "img": "/media/Photo.jpg",
@@ -126,5 +126,21 @@
         "precio": 1500,
         "count": 1,
         "categoria":"Cordero"
-      }  
+      },
+      {
+        "id": 17,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Cerdo"
+      },
+      {
+        "id":18,
+        "img": "/media/Photo.jpg",
+        "nombre": "Producto 1",
+        "precio": 1500,
+        "count": 1,
+        "categoria":"Cerdo"
+      }
 ]

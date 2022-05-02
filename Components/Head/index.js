@@ -25,32 +25,34 @@ const Head = () => {
   return (
     <>
       <div className={style.contenedor}>
-
-        <div className={style.img}>
-          <Image
-            src="/logotipo-donomar.png"
-            alt="logo"
-            onClick={goHome}
-            width="100%"
-            height="100%"
-            layout="responsive"
-            objectFit="contain"
-          />
+        <div className={style.izquierda}>
+          <div className={style.img}>
+            <Image
+              src="/logotipo-donomar.png"
+              alt="logo"
+              onClick={goHome}
+              width="100%"
+              height="100%"
+              layout="responsive"
+              objectFit="contain"
+            />
+          </div>
+          <ul className={style.contenedorLeft}>
+            {arr_nav.map((item, index) => (
+              <li className={style.contMenu} key={index}>
+                <Link href={item.url}>
+                  <a
+                    className={active_nav === index ? "style.active " : style.inactive}
+                    onClick={() => (active_nav = index)}
+                  >
+                    {item.titulo}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul className={style.contenedorLeft}>
-          {arr_nav.map((item, index) => (
-            <li className={style.contMenu} key={index}>
-              <Link href={item.url}>
-                <a
-                  className={active_nav === index ? "style.active " : style.inactive}
-                  onClick={() => (active_nav = index)}
-                >
-                  {item.titulo}
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+
         <div className={style.contCart}>
           <Link href="/Client/Carrito" className={style.btnCart}>
             <span className="material-icons"> shopping_cart </span>

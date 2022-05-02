@@ -7,11 +7,18 @@
   );
   color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
+  padding: 0 8rem;
+}
+.izquierda{
+  display: flex;
+  width: 70%;
+  gap:2rem;
+
 }
 .cantidadCart {
   background-color: green;
@@ -47,14 +54,17 @@
   display: flex;
   width: 100%;
   font-size: 18px;
+  justify-content: center;
 }
 
 .contMenu a {
   cursor: pointer;
   color: white;
 }
+
 .contCart {
   display: flex;
+  margin-top: 1rem; 
 }
 .contCart span {
   color: white;

@@ -16,7 +16,7 @@ const Card = ({ item, check }) => {
     precio: item.precio,
     count: item.count,
     categoria: item.categoria,
-    addCard: item.addCard
+    // addCard: item.addCard
   })
 
 
