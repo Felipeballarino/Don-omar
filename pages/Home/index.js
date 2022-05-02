@@ -2,10 +2,15 @@ import styles from "./Home.module.css";
 import YouTube from "react-youtube";
 import Head from "next/head";
 import Boton from "../../Components/Button";
+import { useRouter } from "next/router";
+
 const Home = () => {
+  const router = useRouter()
   // const _onReady = (event)=> {
   //   event.target.pauseVideo();
   // }
+
+
 
   return (
     <>
@@ -23,12 +28,13 @@ const Home = () => {
               novillito de calidad premium
             </p>
           </div>
-          <img src="media/foto-head.png" alt="head" />
+          <img src="media/foto-head.jpg" alt="head" />
         </div>
 
         <div className={styles.contenedorDos}>
           <div className={styles.card}>
-            <span className="material-icons"> file_download_done </span>
+          <span className="material-icons">verified_user</span>
+
             <h3>Calidad</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -38,7 +44,8 @@ const Home = () => {
             </p>
           </div>
           <div className={styles.card}>
-            <span className="material-icons"> place </span>
+          <span className="material-icons">fmd_good</span>
+
             <h3>Ubicacion</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -74,18 +81,20 @@ const Home = () => {
             </div>
             <div className={styles.cardImg}>
               <h3>CERDO</h3>
-              <img src="media/carne.png" alt="novillo" />
+              <img src="media/cerdo.jpg" alt="novillo" />
             </div>
             <div className={styles.cardImg}>
               <h3>POLLO</h3>
-              <img src="media/carne.png" alt="novillo" />
+              <img src="media/pollo.jpg" alt="novillo" />
             </div>
             <div className={styles.cardImg}>
               <h3>ACHURAS</h3>
-              <img src="media/carne.png" alt="novillo" />
+              <img src="media/achuras.jpg" alt="novillo" />
             </div>
           </div>
-          <Boton>Ver todos los productos</Boton>
+          <div onClick={() => { router.push(`/Client/Tienda`) }}>
+            <Boton >Ver todos los productos</Boton>
+          </div>
         </div>
 
         <div className={styles.contenedorCuatro}>
@@ -99,8 +108,9 @@ const Home = () => {
           <div className={styles.video}>
             <YouTube videoId="https://www.youtube.com/embed/ef-xV3Ce6Vw?feature=oembed" />
           </div>
-
-          <Boton>Ver todas las recetas</Boton>
+          <div onClick={() => { router.push(`/Client/Recetas`) }}>
+            <Boton>Ver todas las recetas</Boton>
+          </div>
         </div>
 
         <div className={styles.contenedorCinco}>
@@ -117,17 +127,17 @@ const Home = () => {
                 </p>
               </div>
               <div className={styles.infoImg}>
-                <img src="media/carne.png" alt="carne" />
-                <img src="media/carne.png" alt="carne" />
-                <img src="media/carne.png" alt="carne" />
+                <img src="media/historia1.jpg" alt="carne" />
+                <img src="media/historia2.jpg" alt="carne" />
+                <img src="media/historia3.jpg" alt="carne" />
               </div>
             </div>
 
             <div className={styles.informacion}>
               <div className={styles.infoImg}>
-                <img src="media/carne.png" alt="carne" />
-                <img src="media/carne.png" alt="carne" />
-                <img src="media/carne.png" alt="carne" />
+                <img src="media/modelo1.jpg" alt="carne" />
+                <img src="media/modelo2.jpg" alt="carne" />
+                <img src="media/modelo3.jpg" alt="carne" />
               </div>
               <div className={styles.info}>
                 <h3>Modelo de negocio</h3>
@@ -150,17 +160,17 @@ const Home = () => {
                 </p>
               </div>
               <div className={styles.infoImg}>
-                <img src="media/carne.png" alt="carne" />
-                <img src="media/carne.png" alt="carne" />
-                <img src="media/carne.png" alt="carne" />
+                <img src="media/vision1.jpg" alt="carne" />
+                <img src="media/vision2.jpg" alt="carne" />
+                <img src="media/vision3.jpg" alt="carne" />
               </div>
             </div>
 
             <div className={styles.informacion}>
               <div className={styles.infoImg}>
-                <img src="media/carne.png" alt="carne" />
-                <img src="media/carne.png" alt="carne" />
-                <img src="media/carne.png" alt="carne" />
+                <img src="media/proximamente1.jpg" alt="carne" />
+                <img src="media/proximamente2.jpg" alt="carne" />
+                <img src="media/proximamente3.jpg" alt="carne" />
               </div>
               <div className={styles.info}>
                 <h3>Proximamente</h3>

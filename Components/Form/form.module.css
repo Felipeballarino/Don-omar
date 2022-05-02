@@ -1,0 +1,128 @@
+.boton {
+  margin: 1rem;
+  cursor: pointer;
+  padding: 0.7rem 2rem;
+  font-size: 17px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(
+    145.52deg,
+    #000000 -32.74%,
+    var(--color-red) 238.81%
+  );
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border: none;
+  transition: all var(--timer-animation);
+}
+.boton:hover {
+  background: linear-gradient(
+    180.52deg,
+    #000000 -20.74%,
+    var(--color-red) 50.81%
+  );
+}
+.cont{
+  width: 100%;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.titulo {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #be202e;
+  margin-bottom: 1rem;
+}
+
+.formulario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.contInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.contInput label {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #010101;
+  margin-bottom: 5px;
+}
+.contInput input {
+  border: 1px solid #cacaca;
+  box-sizing: border-box;
+  border-radius: 10px;
+  align-items: center;
+  padding: 8px 10px;
+}
+.olvidar a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #47973b;
+  cursor: pointer;
+}
+
+.boton {
+  width: 100%;
+  margin: 1rem;
+  cursor: pointer;
+  padding: 0.7rem 2rem;
+  font-size: 17px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(
+    145.52deg,
+    #000000 -32.74%,
+    var(--color-red) 238.81%
+  );
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border: none;
+  transition: all var(--timer-animation);
+}
+.boton :hover {
+  background: linear-gradient(
+    180.52deg,
+    #000000 -20.74%,
+    var(--color-red) 50.81%
+  );
+}
+.registro {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #010101;
+}
+.registro a{
+    color: #47973b;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.close{
+    position: absolute;
+    top: 30px;
+    right: 5%;
+    cursor: pointer;
+}
+.close span{
+    font-weight: bold;
+    font-size: 1.5rem;
+}

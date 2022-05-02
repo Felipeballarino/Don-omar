@@ -1,6 +1,6 @@
 import style from './paginado.module.css'
 
-const Paginado = ({productPerPage, allProduct, paginado}) =>{
+const Paginado = ({productPerPage, allProduct, paginado, current}) =>{
     const pageNumber = [];
 
     for(let i =0; i< Math.ceil(allProduct/productPerPage); i++){
@@ -14,7 +14,9 @@ const Paginado = ({productPerPage, allProduct, paginado}) =>{
             <ul className={style.contenedor}>
                 {pageNumber &&
                 pageNumber.map(number =>(
-                            <a className={style.paginado} onClick={()=>paginado(number)} key={number}>{number}</a>
+                    <div className={number == current ? style.activo : style.paginado} key={number}>
+                        <a  onClick={()=>paginado(number)} key={number}>{number}</a>
+                    </div>
                 ))}
             </ul>
         </div>

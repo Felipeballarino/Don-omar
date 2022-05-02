@@ -67,7 +67,6 @@ export const getProductForId = (payload) => {
 }
 export const filterCateg = (categ, index) => {
     const payload = { categ, index }
-    console.log(payload)
     return (dispatch) => {
         try {
             return dispatch({
