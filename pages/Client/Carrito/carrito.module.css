@@ -103,7 +103,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  text-align: right;
+  /* text-align: right; */
   color: #47973b;
   margin: 0px;
 }
@@ -134,3 +134,67 @@
   margin: 2px;
 }
 
+
+.enviar {
+  margin: 1rem;
+  cursor: pointer;
+  padding: 0.7rem 2rem;
+  font-size: 17px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(
+    145.52deg,
+    #000000 -32.74%,
+    var(--color-red) 238.81%
+  );
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border: none;
+  transition: all var(--timer-animation);
+}
+.enviar:hover {
+  background: linear-gradient(
+    180.52deg,
+    #000000 -20.74%,
+    var(--color-red) 50.81%
+  );
+}
+
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.titulo {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #be202e;
+  margin-bottom: 1rem;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 5%;
+  cursor: pointer;
+}
+.close span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.eliminarEnvio button{
+  background-color: transparent;
+  border: none;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.terminarPedido{
+  text-align: center;
+  width: 100%;
+}
