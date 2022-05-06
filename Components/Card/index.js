@@ -47,11 +47,11 @@ const Card = ({ item, check }) => {
         <button className={styles.carro} >
           {
             check ?
-              <span className="material-icons" title='Eliminar del carrito' onClick={() => eliminarCarrito(contenido.id)}>
+              <span className="material-icons" title='Eliminar del carrito' onClick={() => eliminarCarrito(item.id)}>
                 remove_shopping_cart
               </span>
               :
-              <span className="material-icons" title='Agregar al carrito' onClick={() => agregarCarrito(contenido.id)}>
+              <span className="material-icons" title='Agregar al carrito' onClick={() => agregarCarrito(item.id)}>
                 shopping_cart
               </span >
           }
@@ -59,7 +59,7 @@ const Card = ({ item, check }) => {
         </button>
         <Image
           onClick={() => { router.push(`/Client/Producto/${item.id}`) }}
-          src={contenido.img}
+          src={item.img}
           alt={item}
           width="100%"
           height="100%"
@@ -68,11 +68,11 @@ const Card = ({ item, check }) => {
           priority="false"
         />
         <div className={styles.infoCard}>
-          <h3 onClick={() => { router.push(`/Client/Producto/${item.id}`) }}>{contenido.nombre}</h3>
+          <h3 onClick={() => { router.push(`/Client/Producto/${item.id}`) }}>{item.nombre}</h3>
           <div className={styles.precioCont}>
             <div className={styles.precio}>
               <p>
-                <span>$ {contenido.precio}</span> x un
+                <span>$ {item.precio}</span> x un
               </p>
               <p>Precio Aproximado</p>
             </div>

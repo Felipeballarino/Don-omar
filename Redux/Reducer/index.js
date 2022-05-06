@@ -1,6 +1,6 @@
 import { filterForCateg } from "./filters.js"
 
-
+ 
 const initialState = {
   carrito: [],
   productos: [],

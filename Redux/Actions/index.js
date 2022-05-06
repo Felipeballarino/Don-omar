@@ -1,28 +1,28 @@
 import json from './productos.json'
-// import axios from 'axios'
+import axios from 'axios'
 
 export const consumirJSON = () => {
     return (dispatch) => {
-        //     try{
-        //         axios.get('http://localhost:3001/api/hello')
-        //         .then (response => response.data)
-        //         .then(response =>dispatch({
-        //             type: "CARGAR_DATOS",
-        //             payload: response
-        //         }))
-        //     }catch(error){
-        //         console.log(error)  
-        //     }
-        // }
-        try {
-            return dispatch({
-                type: "CARGAR_DATOS",
-                payload: json
-            })
-        } catch (error) {
-            console.log(error)
+            try{
+                axios.get('http://localhost:3000/api/hello')
+                .then (response => response.data)
+                .then(response =>dispatch({
+                    type: "CARGAR_DATOS",
+                    payload: response
+                }))
+            }catch(error){
+                console.log(error)
+            }
         }
-    }
+        // try {
+        //     return dispatch({
+        //         type: "CARGAR_DATOS",
+        //         payload: json
+        //     })
+        // } catch (error) {
+        //     console.log(error)
+        // }
+    //}
 }
 
 export const addCard = (payload) => {
