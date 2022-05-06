@@ -2,7 +2,7 @@
     {
         "id": 1,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Vacuno 1",
         "precio": 1500,
         "count": 1,
         "categoria":"Vacuno"
@@ -10,7 +10,7 @@
       {
         "id": 2,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Vacuno 2",
         "precio": 1500,
         "count": 1,
         "categoria":"Vacuno"
@@ -18,7 +18,7 @@
       {
         "id": 3,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Cerdo 1",
         "precio": 1500,
         "count": 1,
         "categoria":"Cerdo"
@@ -26,7 +26,7 @@
       {
         "id": 4,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Cerdo 2",
         "precio": 1500,
         "count": 1,
         "categoria":"Cerdo"
@@ -34,7 +34,7 @@
       {
         "id": 5,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Cerdo 3",
         "precio": 1500,
         "count": 1,
         "categoria":"Cerdo"
@@ -42,7 +42,7 @@
       {
         "id": 6,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Cerdo 4",
         "precio": 1500,
         "count": 1,
         "categoria":"Cerdo" 
@@ -50,7 +50,7 @@
       {
         "id": 7,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Pollo 1",
         "precio": 1500,
         "count": 1,
         "categoria":"Pollo"  
@@ -58,7 +58,7 @@
       {
         "id": 8,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Pollo 2",
         "precio": 1500,
         "count": 1,
         "categoria":"Pollo"  
@@ -66,7 +66,7 @@
       {
         "id": 9,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Achuras 1",
         "precio": 1500,
         "count": 1,
         "categoria":"Achuras"
@@ -74,7 +74,7 @@
       {
         "id": 10,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Achuras 2",
         "precio": 1500,
         "count": 1,
         "categoria":"Achuras"  
@@ -82,7 +82,7 @@
       {
         "id": 11,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Embutidos 1",
         "precio": 1500,
         "count": 1,
         "categoria":"Embutidos"  
@@ -90,7 +90,7 @@
       {
         "id": 12,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Embutidos 2",
         "precio": 1500,
         "count": 1,
         "categoria":"Embutidos"
@@ -98,7 +98,7 @@
       {
         "id": 13,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Fiambres 1",
         "precio": 1500,
         "count": 1,
         "categoria":"Fiambres"
@@ -106,7 +106,7 @@
       {
         "id": 14,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Fiambres 2",
         "precio": 1500,
         "count": 1,
         "categoria":"Fiambres"  
@@ -114,7 +114,7 @@
       {
         "id": 15,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Elaborados 1",
         "precio": 1500,
         "count": 1,
         "categoria":"Elaborados"  
@@ -122,7 +122,7 @@
       {
         "id": 16,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Cordero 1",
         "precio": 1500,
         "count": 1,
         "categoria":"Cordero"
@@ -130,7 +130,7 @@
       {
         "id": 17,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Cerdo 5",
         "precio": 1500,
         "count": 1,
         "categoria":"Cerdo"
@@ -138,7 +138,7 @@
       {
         "id":18,
         "img": "/media/Photo.jpg",
-        "nombre": "Producto 1",
+        "nombre": "Cerdo 6",
         "precio": 1500,
         "count": 1,
         "categoria":"Cerdo"

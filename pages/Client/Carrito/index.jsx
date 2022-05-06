@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 import { deleteCart, deleteStado } from "../../../Redux/Actions";
 import { useState, useEffect } from "react";
 import Form from "../../../Components/Form/index";
-
+import { useRouter } from "next/router";
+import Swal from 'sweetalert2'
 import Box from "@mui/material/Box";
 // import Button from '@mui/material/Button';
 import Typography from "@mui/material/Typography";
@@ -26,6 +27,9 @@ const Carrito = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const router = useRouter()
+
 
   const state = useSelector((state) => state.carrito);
   const dispatch = useDispatch();
@@ -55,11 +59,17 @@ const Carrito = () => {
   ${state.map((d, i) => `${d.count} Kg de ${d.nombre} `)} `;
 
   const enviarPedido = () => {
-    window.open(
-      `https://api.whatsapp.com/send?phone=543536560998&text=${pedido}`,
-      "_system"
-    );
-  };
+    // window.open(
+    //   `https://api.whatsapp.com/send?phone=543536570880&text=${pedido}`,
+    //   "_system"
+    // );
+    Swal.fire({
+      icon: 'success',
+      title: 'Muchas gracias por su compra !',
+      showConfirmButton: false,
+    })
+    router.push(`/Client/Tienda`)
+    };
 
   return (
     <>
