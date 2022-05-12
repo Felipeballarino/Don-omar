@@ -76,7 +76,7 @@ const Info = (props) => {
                                 <span> {contenido.count}</span>
                                 <span onClick={() => editCount("sum")}> + </span>
                             </div>
-                            <p className={styles.unidades}>La unidad de este producto oscila entre 0,9 y 1,2 Kg.</p>
+                            <p className={styles.unidades}>La unidad de éste producto oscila entre "0,9 y 1,2 kg.</p>
                             <div className={styles.boton}>
                                 {
                                     check ?

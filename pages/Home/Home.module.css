@@ -1,3 +1,7 @@
+.contenedorPrincipal {
+  width: 100%;
+}
+
 .contenedorPrincipal h1 {
   color: white;
 }
@@ -16,7 +20,10 @@
   height: 25%;
   padding-top: 1rem;
 }
-.tituloImagen h1 {
+.nombre {
+  display: flex;
+}
+.nombre h1 {
   margin: 10px;
   font-weight: 900;
   font-size: 50px;
@@ -113,9 +120,7 @@
   background-size: cover !important;
 }
 
-.video {
-  padding: 2rem;
-}
+
 .cardImg h3 {
   width: 100%;
   position: absolute;
@@ -167,6 +172,9 @@
 .titulo p {
   font-size: 20px;
 }
+.video {
+  padding: 2rem;
+}
 
 .contenedorCinco h1 {
   font-weight: 500;
@@ -178,6 +186,7 @@
 
 .informacion {
   display: flex;
+  flex-direction: row  ;
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
@@ -193,12 +202,10 @@
   width: 25%;
 }
 .info h3 {
-  
   font-weight: 500;
-font-size: 30px;
-line-height: 36px;
-color: #47973B;
-
+  font-size: 30px;
+  line-height: 36px;
+  color: #47973b;
 }
 .infoImg img {
   border-radius: 10px;
@@ -206,3 +213,176 @@ color: #47973B;
   max-width: 240px;
   height: 306px;
 }
+
+@media only screen and (max-width: 700px) {
+  .contenedorUno {
+    height: auto;
+  }
+  .contenedorUno img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin-top: 80px;
+  }
+  .nombre {
+    flex-direction: column;
+  }
+  .nombre h1 {
+    margin-bottom: 0;
+  }
+  .tituloImagen {
+    padding: 0;
+    justify-content: start;
+    height: auto;
+  }
+  .tituloImagen h1 {
+    font-size: 25px;
+    line-height: 18px;
+  }
+  .tituloImagen p {
+    margin-top: 0.5rem;
+    width: 70%;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  /* ................................ */
+
+  .contenedorDos {
+    flex-direction: column;
+    padding: 7rem 1rem 4rem;
+    gap: 2rem;
+  }
+  
+
+  /* ......................... */
+  .contenedorTres{
+    padding-bottom: 2rem;
+  }
+  .titulo h1 {
+    font-size: 30px;
+    margin-bottom: 0rem;
+  }
+  .titulo p {
+    line-height: 17px;
+    font-size: 14px;
+    padding: 0 1rem;
+  }
+
+  .imagenes {
+    overflow: scroll;
+    width: 100%;
+    gap: 2rem;
+    padding: 0 2rem 1rem 2rem;
+  }
+  .cardImg {
+    min-width: 240px;
+  }
+  .imagenes::-webkit-scrollbar {
+    width: 10px;
+    height: 7px;
+  }
+
+  /* Track */
+  .imagenes::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  .imagenes::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: linear-gradient(
+      260.83deg,
+      #010101 37.97%,
+      var(--color-red) 241.95%
+    );
+  }
+
+  /* Handle on hover */
+  .imagenes::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }
+
+
+  .titulo {
+    text-align: center;
+  }
+  .titulo h1 {
+    font-size: 37px;
+  }
+  .titulo p {
+    font-size: 17px;
+  }
+  .video {
+    padding: 0rem;
+  }
+  
+  .video iframe{
+    width: 100%;
+    height: auto;
+  }
+  
+  /* ........................ */
+  .contenedorCinco h1 {
+    margin: 1rem;
+  }
+  
+  .informacion {
+    flex-direction: column !important; 
+    padding: 0rem 0;
+  }
+  .informacion:nth-child(2){
+    flex-direction: column-reverse !important; 
+  }
+  .informacion:nth-child(4){
+    flex-direction: column-reverse !important;
+  }
+  
+  .infoImg {
+    width: 100%;
+    overflow-x: scroll;
+    gap: 1rem;
+    justify-content: initial;
+    padding: 0 1rem 1rem;
+  }
+  .infoImg::-webkit-scrollbar {
+    
+    width: 10px;
+    height: 6px;
+  }
+  
+  /* Track */
+  .infoImg::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .infoImg::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: linear-gradient(
+      260.83deg,
+      #010101 37.97%,
+      var(--color-red) 241.95%
+    );
+  }
+  
+  /* Handle on hover */
+  
+  .info {
+    padding:  00rem 1rem;
+    width: 100%;
+  }
+  .info h3 {
+    margin: 1rem 0;
+  }
+  .infoImg img {
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 100%);
+    max-width: 240px;
+    height: 306px;
+  }
+  
+}
+
+/* ..................... */
+

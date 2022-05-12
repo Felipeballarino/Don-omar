@@ -1,11 +1,12 @@
 import { filterForCateg } from "./filters.js"
 
- 
+
 const initialState = {
   carrito: [],
   productos: [],
   detalles: [],
-  filtrado: []
+  filtrado: [],
+  // categorias: []
 }
 
 const Reducer = (state = initialState, { type, payload }) => {
@@ -14,8 +15,13 @@ const Reducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         productos: payload,
-        filtrado:payload
+        filtrado: payload
       }
+    // case "GET_CATEG":
+    //   return {
+    //     ...state,
+    //     categorias: payload
+    //   }
 
     case "ADD_CARD":
       payload.addCard = true
@@ -36,7 +42,7 @@ const Reducer = (state = initialState, { type, payload }) => {
         ...state,
         detalles: state.productos.filter(e => e.id == (+payload))
       }
-    
+
     case "FILTER_CATEG":
       return {
         ...state,

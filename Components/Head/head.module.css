@@ -14,11 +14,44 @@
   z-index: 100;
   padding: 0 8rem;
 }
-.izquierda{
+.izquierda {
   display: flex;
   width: 70%;
-  gap:2rem;
+  gap: 2rem;
+}
 
+.contenedor .img {
+  cursor: pointer;
+  width: 190px;
+}
+
+.contenedorLeft {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin-bottom: 0;
+  padding: 0;
+}
+.contMenu {
+  display: flex;
+  width: 100%;
+  font-size: 18px;
+  justify-content: center;
+  text-align: center;
+}
+
+.contMenu a {
+  cursor: pointer;
+  color: white;
+}
+
+.contCart {
+  display: flex;
+  margin-top: 1rem;
+}
+.contCart span {
+  color: white;
+  cursor: pointer;
 }
 .cantidadCart {
   background-color: green;
@@ -38,44 +71,199 @@
   margin: 0;
   color: white;
 }
-.contenedor .img {
-  cursor: pointer;
-  width: 190px;
-}
-
-.contenedorLeft {
-  display: flex;
-  align-items: center;
-  width: 50%;
-  margin-bottom: 0;
-  padding: 0;
-}
-.contMenu {
-  display: flex;
-  width: 100%;
-  font-size: 18px;
-  justify-content: center;
-}
-
-.contMenu a {
-  cursor: pointer;
-  color: white;
-}
-
-.contCart {
-  display: flex;
-  margin-top: 1rem; 
-}
-.contCart span {
-  color: white;
-  cursor: pointer;
-}
 .active {
   padding-bottom: 5px;
   font-weight: 500;
-  border-bottom: 1px solid white;
+  width: 100%;
 }
 
 .inactive {
   border-bottom: none !important;
+  width: 100%;
+}
+.hambur {
+  display: none;
+}
+.menuDesplegable {
+  transition: all 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+  transform: translateX(0%);
+}
+.menuDesplegable li {
+  transition: 0.8s all;
+}
+.menuDesplegableNone {
+  position: absolute;
+  transform: translateX(100%);
+  transition: all 0.8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 700px) {
+  .contenedor {
+    width: 100vw;
+    height: 81px;
+    padding: 0 1rem;
+  }
+  .contenedor .img {
+    width: 160px !important;
+  }
+  .contenedorLeft {
+    display: none;
+  }
+  .contCart {
+    display: none;
+  }
+  .hambur {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+  .hambur i {
+    color: white;
+    font-size: 40px;
+  }
+  .menuDesplegableNone {
+    transform: translateX(100%);
+    position: absolute;
+    width: 100%;
+    right: 0;
+    background: linear-gradient(
+      260.83deg,
+      #010101 37.97%,
+      var(--color-red) 241.95%
+    );
+    top: 80px;
+  }
+  .menuDesplegable {
+    display: block;
+    background: linear-gradient(
+      260.83deg,
+      #010101 37.97%,
+      var(--color-red) 241.95%
+    );
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 80px;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    height: auto;
+  }
+  .contHambur {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .contHambur li {
+    padding: 1rem;
+    color: white;
+    list-style: none;
+    font-size: 15px;
+    display: flex;
+    align-item: center;
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+  }
+  .contHambur li a i {
+    margin-right: 1rem;
+    gap: 1rem;
+    color: white;
+  }
+  .contHambur li a span {
+    margin-right: 1rem;
+    gap: 1rem;
+    color: white;
+    font-size: 15px;
+  }
+  .cantidadMenu{
+    background-color:white;
+    display: flex;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    position: absolute;
+    top: 18px;
+    border: 3px solid black;
+    color: white;
+    right: 38px;
+  }
+  .cantidadMenu p {
+    font-weight: 600;
+    color: black;
+  }
+  .cantidadCart {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    margin-left: 0px;
+    margin-top: 0px;
+
+  }
+}
+
+.hamburguesa{
+  display: flex;
+  background-color: transparent;
+  border: none;
+  transition: .5s;
+}
+
+.creado{
+  color: white;
+  border-top: 3.2px solid;
+  width: 30px;
+  transition: 1s;
+
+}
+.creado::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin-top: 7px;
+  transition: 1s;
+
+}
+.creado::before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin-top: 7px;
+  transition: 1s;
+
+}
+
+.cerrado{
+  color: transparent;
+  transition: 1s;
+  position: relative;
+}
+.cerrado::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin-top: 7px;
+  transition: 1s;
+  transform: rotate(135deg);
+  position: relative;
+  top: -10px;
+
+}
+.cerrado::before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin-top: 7px;
+  transition: 1s;
+  transform: rotate(-135deg);
+
 }

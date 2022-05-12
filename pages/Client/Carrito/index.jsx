@@ -5,7 +5,7 @@ import { deleteCart, deleteStado } from "../../../Redux/Actions";
 import { useState, useEffect } from "react";
 import Form from "../../../Components/Form/index";
 import { useRouter } from "next/router";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 import Box from "@mui/material/Box";
 // import Button from '@mui/material/Button';
 import Typography from "@mui/material/Typography";
@@ -28,8 +28,7 @@ const Carrito = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const router = useRouter()
-
+  const router = useRouter();
 
   const state = useSelector((state) => state.carrito);
   const dispatch = useDispatch();
@@ -64,12 +63,12 @@ const Carrito = () => {
     //   "_system"
     // );
     Swal.fire({
-      icon: 'success',
-      title: 'Muchas gracias por su compra !',
+      icon: "success",
+      title: "Muchas gracias por su compra !",
       showConfirmButton: false,
-    })
-    router.push(`/Client/Tienda`)
-    };
+    });
+    router.push(`/Client/Tienda`);
+  };
 
   return (
     <>
@@ -89,6 +88,11 @@ const Carrito = () => {
                     <img src={d.img} alt="img" className={styles.imagen} />{" "}
                     {d.nombre}
                   </li>
+                  <li className={styles.eliminarMobile}>
+                    <button onClick={() => eliminarCart(d.id)}>
+                      <span className="material-icons">close</span>
+                    </button>
+                  </li>
                   <li className={styles.cantidad}>{d.count} Kg</li>
                   <li className={styles.precio}>${d.precio}</li>
                   <li className={styles.eliminar}>
@@ -104,12 +108,12 @@ const Carrito = () => {
           </div>
           <div className={styles.footer}>
             <span>
-              El total del carrito es una aproximacion, una vez armado el
+              El total del carrito es una aproximación, una vez armado el
               pedido, te enviaremos el peso y precio correspondiente.
             </span>
             <div className={styles.total}>
               <h1>Total ${total} </h1>
-              <p>Compra minima $3000*</p>
+              <p>Compra mínima $3000*</p>
             </div>
             <div className={styles.boton}>
               {login ? (

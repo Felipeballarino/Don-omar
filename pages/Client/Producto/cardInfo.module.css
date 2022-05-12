@@ -147,3 +147,72 @@
 .cardRelacion {
   margin-bottom: 1rem;
 }
+
+
+@media only screen and (max-width: 700px) {
+  .contendor {
+    height: 100%;
+    padding-top: 6rem;
+  }
+  .card {
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+  }
+  .cardLeft img {
+    width: 100%;
+  }
+  .cardRigth h1 {
+    font-size: 18px;
+  }
+  .precio p {
+    font-size: 18px;
+  }
+  
+  .precio span {
+    font-size: 18px;
+  }
+
+  .cantidad span {
+   font-size: 18px;
+  }
+
+  .unidades {
+    font-size: 13px;
+  }
+  .contenedorSugerencias {
+    padding: 1rem;   
+  }
+  .contenedorSugerencias h1 {
+    font-size: 27px;
+    line-height: 1rem;
+  }
+  .relacionados {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    padding: 0 1rem;
+  }
+  .relacionados::-webkit-scrollbar {
+    
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  .relacionados::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .relacionados::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: linear-gradient(
+      260.83deg,
+      #010101 37.97%,
+      var(--color-red) 241.95%
+    );
+  }
+  
+
+}

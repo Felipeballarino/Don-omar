@@ -82,7 +82,7 @@ const Card = ({ item, check }) => {
               <span onClick={() => editCount("sum")}> + </span>
             </div>
           </div>
-          <p>La unidad de este producto oscila entre *0.9 y 1.2 kg.</p>
+          <p>La unidad de éste producto oscila entre "0,9 y 1,2 kg.</p>
         </div>
       </div>
     </>
