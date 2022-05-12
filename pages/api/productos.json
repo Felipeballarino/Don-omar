@@ -5,7 +5,7 @@
         "nombre": "Vacuno 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Vacuno"
+        "categoria":"Cortes de Vaca"
       },
       {
         "id": 2,
@@ -13,7 +13,7 @@
         "nombre": "Vacuno 2",
         "precio": 1500,
         "count": 1,
-        "categoria":"Vacuno"
+        "categoria":"Cortes de Vaca"
       },
       {
         "id": 3,
@@ -21,7 +21,7 @@
         "nombre": "Cerdo 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cerdo"
+        "categoria":"Cortes de Cerdo"
       },
       {
         "id": 4,
@@ -29,7 +29,7 @@
         "nombre": "Cerdo 2",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cerdo"
+        "categoria":"Cortes de Cerdo"
       },
       {
         "id": 5,
@@ -37,7 +37,7 @@
         "nombre": "Cerdo 3",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cerdo"
+        "categoria":"Cortes de Cerdo"
       },
       {
         "id": 6,
@@ -45,87 +45,87 @@
         "nombre": "Cerdo 4",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cerdo" 
+        "categoria":"Cortes de Cerdo" 
       },
       {
         "id": 7,
         "img": "/media/Photo.jpg",
-        "nombre": "Pollo 1",
+        "nombre": "Vacuno 3",
         "precio": 1500,
         "count": 1,
-        "categoria":"Pollo"  
+        "categoria":"Cortes de Vaca"  
       },
       {
         "id": 8,
         "img": "/media/Photo.jpg",
-        "nombre": "Pollo 2",
+        "nombre": "Vacuno 4",
         "precio": 1500,
         "count": 1,
-        "categoria":"Pollo"  
+        "categoria":"Cortes de Vaca"  
       },
       {
         "id": 9,
         "img": "/media/Photo.jpg",
-        "nombre": "Achuras 1",
+        "nombre": "ofertas 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Achuras"
+        "categoria":"Ofertas"
       },
       {
         "id": 10,
         "img": "/media/Photo.jpg",
-        "nombre": "Achuras 2",
+        "nombre": "ofertas 2",
         "precio": 1500,
         "count": 1,
-        "categoria":"Achuras"  
+        "categoria":"Ofertas"  
       },
       {
         "id": 11,
         "img": "/media/Photo.jpg",
-        "nombre": "Embutidos 1",
+        "nombre": "Ofertas 3",
         "precio": 1500,
         "count": 1,
-        "categoria":"Embutidos"  
+        "categoria":"Ofertas"  
       },
       {
         "id": 12,
         "img": "/media/Photo.jpg",
-        "nombre": "Embutidos 2",
+        "nombre": "ofertas 4",
         "precio": 1500,
         "count": 1,
-        "categoria":"Embutidos"
+        "categoria":"Ofertas"
       }  ,
       {
         "id": 13,
         "img": "/media/Photo.jpg",
-        "nombre": "Fiambres 1",
+        "nombre": "varios 1",
         "precio": 1500,
         "count": 1,
-        "categoria":"Fiambres"
+        "categoria":"Varios"
       },
       {
         "id": 14,
         "img": "/media/Photo.jpg",
-        "nombre": "Fiambres 2",
+        "nombre": "varios 2",
         "precio": 1500,
         "count": 1,
-        "categoria":"Fiambres"  
+        "categoria":"Varios"  
       },
       {
         "id": 15,
         "img": "/media/Photo.jpg",
-        "nombre": "Elaborados 1",
+        "nombre": "varios 3",
         "precio": 1500,
         "count": 1,
-        "categoria":"Elaborados"  
+        "categoria":"Varios"  
       },
       {
         "id": 16,
         "img": "/media/Photo.jpg",
-        "nombre": "Cordero 1",
+        "nombre": "Vacuno 5",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cordero"
+        "categoria":"Cortes de Vaca"
       },
       {
         "id": 17,
@@ -133,7 +133,7 @@
         "nombre": "Cerdo 5",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cerdo"
+        "categoria":"Cortes de Cerdo"
       },
       {
         "id":18,
@@ -141,6 +141,6 @@
         "nombre": "Cerdo 6",
         "precio": 1500,
         "count": 1,
-        "categoria":"Cerdo"
+        "categoria":"Cortes de Cerdo"
       }
 ]

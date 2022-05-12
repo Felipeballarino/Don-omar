@@ -2,23 +2,31 @@ import styles from "./tienda.module.css";
 import Head from "next/head";
 import Card from "../../../Components/Card";
 import { useDispatch, useSelector } from "react-redux";
-import { filterCateg, consumirJSON } from "../../../Redux/Actions";
+import { filterCateg, consumirJSON, getCateg } from "../../../Redux/Actions";
 import { useEffect } from "react";
 import Paginado from "../../../Components/Paginado";
 import { useState } from "react";
 
+import { makeStyles } from "@material-ui/core/styles";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import ListSubheader from "@material-ui/core/ListSubheader";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: '100%',
+  },
+}));
+
 const arr_categs = [
   { nombre: "Todas", icon: "" },
-  { nombre: "Vacuno", icon: "" },
-  { nombre: "Cerdo", icon: "" },
-  { nombre: "Pollo", icon: "" },
-  { nombre: "Achuras", icon: "" },
-  { nombre: "Embutidos", icon: "" },
-  { nombre: "Fiambres", icon: "" },
-  { nombre: "Corte x unidad", icon: "" },
-  { nombre: "Elaborados", icon: "" },
-  { nombre: "Cordero", icon: "" },
-  { nombre: "Otros", icon: "" },
+  { nombre: "Cortes de Vaca", icon: "" },
+  { nombre: "Cortes de Cerdo", icon: "" },
+  { nombre: "Ofertas", icon: "" },
+  { nombre: "Varios", icon: "" }
 ];
 
 let nav_arr = 0;
@@ -28,6 +36,8 @@ const Tienda = () => {
   const state_carrito = useSelector((state) => state.carrito);
   const dispatch = useDispatch();
 
+  const classes = useStyles();
+
   //PAGINADO
   const [currentPage, setCurrentPage] = useState(1);
   const [productPerPage, _setProductPerPage] = useState(6);
@@ -35,6 +45,8 @@ const Tienda = () => {
   const indexOfFirstProduct = indexOfLastProduct - productPerPage; //0
   const currentProduct = state.slice(indexOfFirstProduct, indexOfLastProduct);
   const final = state.length / 6;
+  const [filtro, setFiltro] = useState("");
+  // const categorias = useSelector(state => state.categorias)
 
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -46,11 +58,23 @@ const Tienda = () => {
     setCurrentPage(1);
   };
 
-  useEffect(() => {
+  const changeFilter = (e) => {
+    e.preventDefault();
+    setFiltro(e.target.value);
+    if (e.target.value === "all") {
+      dispatch(filterCateg("Todas"));
+    } else {
+      dispatch(filterCateg(e.target.value));
+    }
+    setFiltro("");
+  };
+
+  useEffect(async () => {
+    // dispatch(getCateg());
     if (!state.length) {
       dispatch(consumirJSON());
     }
-    dispatch(filterCateg("Todas", 0));
+    dispatch(filterCateg("Todas"));
   }, [dispatch]);
 
   const checkProduct = (producto) => {
@@ -72,7 +96,7 @@ const Tienda = () => {
       </Head>
       <div className={styles.container}>
         <div className={styles.categorias}>
-          <h1>Categorias </h1>
+          <h1>CATEGORÍAS </h1>
           <ul>
             {arr_categs.map((item, index) => (
               <li
@@ -85,6 +109,20 @@ const Tienda = () => {
               </li>
             ))}
           </ul>
+          <FormControl className={classes.formControl}>
+            <InputLabel htmlFor="grouped-select">Categorías</InputLabel>
+            <Select defaultValue="Todas" id="grouped-select"  onChange={changeFilter}  className={styles.select}> 
+              {arr_categs.map((item, index) => (
+              <MenuItem
+                key={index}
+                value={item.nombre}
+              >
+                {item.nombre}
+              </MenuItem>
+            ))}
+            </Select>
+          </FormControl>
+          
         </div>
         <div className={styles.contRight}>
           <div className={styles.contCard}>

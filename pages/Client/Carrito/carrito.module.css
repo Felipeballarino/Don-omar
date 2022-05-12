@@ -198,3 +198,88 @@
   text-align: center;
   width: 100%;
 }
+.eliminarMobile{
+  display: none;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .conteiner {
+    padding-top: 6rem;
+  }
+  .contCarro{
+    width: 90%;
+  }
+  .headCart {
+    display: none;
+  }
+  .unidades {
+    flex-wrap: wrap;
+  }
+  .unidades li{
+    width: 50%;
+  padding: 0.2rem 0 
+  }
+
+  .nombreImg{
+    font-weight: 500;
+    font-size: 17px;
+  }
+  .cantidad {
+    font-size: 17px;
+    padding: 0.2rem 1rem !important;
+    font-weight: 700;
+  }
+  .precio {
+    padding: 0.2rem 1rem !important;
+    text-align: end;
+    font-size: 20px;
+  }
+  
+  .eliminarMobile{
+    display: block;
+    text-align: end;
+    font-weight: 700;
+    
+  }
+  .eliminarMobile button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+  }
+  .eliminarMobile button span{
+    color: var(--color-red);
+    font-weight: 900;   
+  }
+  .eliminar {
+    display: none;
+  }
+  .footer {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .footer span {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .total{
+    padding-bottom: 1rem;
+    text-align:center;
+  }
+  .boton{
+    width: 100%;
+    text-align: center; 
+  }
+  .enviar{
+    align-items: center;
+    width: 90% !important;
+    justify-content: center;
+  }
+  .enviar span{
+  padding: 0;
+  }
+  
+
+}

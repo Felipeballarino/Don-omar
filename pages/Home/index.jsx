@@ -5,12 +5,10 @@ import Boton from "../../Components/Button";
 import { useRouter } from "next/router";
 
 const Home = () => {
-  const router = useRouter()
+  const router = useRouter();
   // const _onReady = (event)=> {
   //   event.target.pauseVideo();
   // }
-
-
 
   return (
     <>
@@ -22,7 +20,10 @@ const Home = () => {
       <div className={styles.contenedorPrincipal}>
         <div className={styles.contenedorUno}>
           <div className={styles.tituloImagen}>
-            <h1>DON OMAR CARNES DE CAMPO</h1>
+            <div className={styles.nombre}>
+              <h1>DON OMAR</h1>
+              <h1>CARNES DE CAMPO</h1>
+            </div>
             <p>
               Una familia de 3 generaciones produciendo y distribuyendo carne de
               novillito de calidad premium
@@ -33,7 +34,7 @@ const Home = () => {
 
         <div className={styles.contenedorDos}>
           <div className={styles.card}>
-          <span className="material-icons">verified_user</span>
+            <span className="material-icons">verified_user</span>
 
             <h3>Calidad</h3>
             <p>
@@ -44,9 +45,9 @@ const Home = () => {
             </p>
           </div>
           <div className={styles.card}>
-          <span className="material-icons">fmd_good</span>
+            <span className="material-icons">fmd_good</span>
 
-            <h3>Ubicacion</h3>
+            <h3>Ubicación</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Molestiae sit illo sint cum maxime quibusdam, aliquam pariatur
@@ -70,8 +71,8 @@ const Home = () => {
           <div className={styles.titulo}>
             <h1>Tienda Online</h1>
             <p>
-              Elegi tus productos preferidos, arma tu carrito y recibilo en la
-              comunidad de tu hogar
+              Elegí tus productos preferidos, armá tu carrito y recibilo en la
+              comodidad de tu hogar.
             </p>
           </div>
           <div className={styles.imagenes}>
@@ -92,8 +93,12 @@ const Home = () => {
               <img src="media/achuras.jpg" alt="novillo" />
             </div>
           </div>
-          <div onClick={() => { router.push(`/Client/Tienda`) }}>
-            <Boton >Ver todos los productos</Boton>
+          <div
+            onClick={() => {
+              router.push(`/Client/Tienda`);
+            }}
+          >
+            <Boton>Ver todos los productos</Boton>
           </div>
         </div>
 
@@ -101,14 +106,18 @@ const Home = () => {
           <div className={styles.titulo}>
             <h1>Recetas</h1>
             <p>
-              Ingresa en nuestro canal de youtube y busca tus recetas preferidas
-              de la mano de nuetros cheff
+              Ingresá en nuestro canal de youtube y busca tus recetas preferidas
+              de la mano de nuestros cheff
             </p>
           </div>
           <div className={styles.video}>
             <YouTube videoId="https://www.youtube.com/embed/ef-xV3Ce6Vw?feature=oembed" />
           </div>
-          <div onClick={() => { router.push(`/Client/Recetas`) }}>
+          <div
+            onClick={() => {
+              router.push(`/Client/Recetas`);
+            }}
+          >
             <Boton>Ver todas las recetas</Boton>
           </div>
         </div>
@@ -151,7 +160,7 @@ const Home = () => {
             </div>
             <div className={styles.informacion}>
               <div className={styles.info}>
-                <h3>Vision y mision</h3>
+                <h3>Visión y misión</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Magnam possimus assumenda commodi soluta et cum aliquid

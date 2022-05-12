@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-around;
     padding: 3rem 0;
+    flex-direction: row;
     align-items: center;
     margin-top: 5rem;
 }
@@ -61,4 +62,57 @@
 .contactenos p{
     font-size: 13px;
     color: white;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .contenedor{
+        flex-direction: column;
+    }
+
+    .contUno{
+        width: 45%;
+    
+    }
+    .contUno img{
+        width: 120px;
+    }
+   
+    .redes i{
+        font-size: 30px;
+    }
+
+    .contDos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0px;
+        border-right:none;
+        border-bottom: 1px solid white;
+    }
+    .contDos h1{
+        font-size: 16px;
+    }
+    .contDos p{
+        font-size: 12px;
+    }
+
+    .contTres{
+        align-items: center;    
+        line-height: 19px;
+    }
+    
+    .contTres h1{
+        font-size: 16px;
+        
+    
+    }
+    .contactenos{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contactenos p{
+        font-size: 12px;
+    }
 }

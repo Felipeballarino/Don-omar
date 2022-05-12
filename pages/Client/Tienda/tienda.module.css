@@ -1,5 +1,5 @@
 .container {
-  padding: 130px 6rem 0 6rem;
+  padding: 130px 2rem 0 2rem;
   display: flex;
   justify-content: center;
 }
@@ -10,6 +10,9 @@
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 1rem 0;
+}
+.categorias select{
+  display: none
 }
 .categorias h1 {
   padding: 0 1rem;
@@ -67,4 +70,64 @@ color: var(--color-red);}
   margin-top: 35px;
   cursor: pointer;
   
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem  0 0 0;
+    
+  }
+  .categorias {
+    width: 90%;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .categorias ul {
+   display: none;
+  }
+  .categorias h1{
+    display: none;
+  }
+  .categorias select{
+    display: block;
+    width: 100%;
+    border: none;
+    transition: all 0.25s ease;
+    
+   }
+
+   .categorias select option{
+     border-radius: 10px;
+   }
+
+   .select{
+     color: var(--color-red);
+     font-weight: 700;
+    font-size: 17px;
+    transition: all 0.25s ease;
+   }
+   /* .active{
+     font-size: 20px;
+     color:var(--color-red)
+   }; */
+  /*.opcion{
+    padding: 0 1rem;
+  font-size: 20px;
+  color: var(--color-red);
+  } */
+  
+
+  .contRight{
+    width: 90%;
+  }
+  .contCard {
+    padding: 0 0rem;
+  }
+  .categorias FormControl {
+    display: none;
+  }
+  
+
 }

@@ -3,25 +3,25 @@ import axios from 'axios'
 
 export const consumirJSON = () => {
     return (dispatch) => {
-            try{
-                axios.get('http://localhost:3000/api/hello')
-                .then (response => response.data)
-                .then(response =>dispatch({
+        try {
+            axios.get('http://localhost:3000/api/hello')
+                .then(response => response.data)
+                .then(response => dispatch({
                     type: "CARGAR_DATOS",
                     payload: response
                 }))
-            }catch(error){
-                console.log(error)
-            }
+        } catch (error) {
+            console.log(error)
         }
-        // try {
-        //     return dispatch({
-        //         type: "CARGAR_DATOS",
-        //         payload: json
-        //     })
-        // } catch (error) {
-        //     console.log(error)
-        // }
+    }
+    // try {
+    //     return dispatch({
+    //         type: "CARGAR_DATOS",
+    //         payload: json
+    //     })
+    // } catch (error) {
+    //     console.log(error)
+    // }
     //}
 }
 
@@ -65,8 +65,18 @@ export const getProductForId = (payload) => {
         }
     }
 }
-export const filterCateg = (categ, index) => {
-    const payload = { categ, index }
+// export const getCateg = () => {
+//     return (dispatch) => {
+//         try {
+//             axios.get('http://carnesdelcentroapi.neosolutions.com.ar/categorias/list')
+//                 .then(response => console.log(response))
+//         } catch (error) {
+//             console.log(error)
+//         }
+//     }
+// }
+export const filterCateg = (categ) => {
+    const payload = { categ }
     return (dispatch) => {
         try {
             return dispatch({
