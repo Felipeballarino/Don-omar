@@ -6,9 +6,6 @@ import { useRouter } from "next/router";
 
 const Home = () => {
   const router = useRouter();
-  // const _onReady = (event)=> {
-  //   event.target.pauseVideo();
-  // }
 
   return (
     <>
@@ -26,7 +23,7 @@ const Home = () => {
             </div>
             <p>
               Una familia de 3 generaciones produciendo y distribuyendo carne de
-              novillito de calidad premium
+              novillito de calidad premium.
             </p>
           </div>
           <img src="media/foto-head.jpg" alt="head" />

@@ -25,7 +25,6 @@ const Recetas = () => {
     const opts = {
         height: "390",
         playerVars: {
-            // https://developers.google.com/youtube/player_parameters
             autoplay: false,
             }
     }

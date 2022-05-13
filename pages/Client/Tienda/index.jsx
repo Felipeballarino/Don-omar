@@ -2,7 +2,7 @@ import styles from "./tienda.module.css";
 import Head from "next/head";
 import Card from "../../../Components/Card";
 import { useDispatch, useSelector } from "react-redux";
-import { filterCateg, consumirJSON, getCateg } from "../../../Redux/Actions";
+import { filterCateg, consumirJSON } from "../../../Redux/Actions";
 import { useEffect } from "react";
 import Paginado from "../../../Components/Paginado";
 import { useState } from "react";
@@ -10,7 +10,6 @@ import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
-import ListSubheader from "@material-ui/core/ListSubheader";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 
@@ -38,7 +37,7 @@ const Tienda = () => {
 
   const classes = useStyles();
 
-  //PAGINADO
+  //----------PAGINADO-------------
   const [currentPage, setCurrentPage] = useState(1);
   const [productPerPage, _setProductPerPage] = useState(6);
   const indexOfLastProduct = currentPage * productPerPage; // 6
@@ -46,41 +45,10 @@ const Tienda = () => {
   const currentProduct = state.slice(indexOfFirstProduct, indexOfLastProduct);
   const final = state.length / 6;
   const [filtro, setFiltro] = useState("");
-  // const categorias = useSelector(state => state.categorias)
 
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-
-  const handlerFilter = (categ, index) => {
-    nav_arr = index;
-    dispatch(filterCateg(categ, index));
-    setCurrentPage(1);
-  };
-
-  const changeFilter = (e) => {
-    e.preventDefault();
-    setFiltro(e.target.value);
-    if (e.target.value === "all") {
-      dispatch(filterCateg("Todas"));
-    } else {
-      dispatch(filterCateg(e.target.value));
-    }
-    setFiltro("");
-  };
-
-  useEffect(async () => {
-    // dispatch(getCateg());
-    if (!state.length) {
-      dispatch(consumirJSON());
-    }
-    dispatch(filterCateg("Todas"));
-  }, [dispatch]);
-
-  const checkProduct = (producto) => {
-    return state_carrito.find((e) => e.id === producto.id) ? true : false;
-  };
-
   const navegar = (data) => {
     if (data == "next") {
       setCurrentPage(currentPage + 1);
@@ -89,6 +57,40 @@ const Tienda = () => {
     }
   };
 
+  //------------------------------------
+
+
+  useEffect(async () => {
+    if (!state.length) {
+      dispatch(consumirJSON());
+    }
+    dispatch(filterCateg("Todas"));
+  }, [dispatch]);
+
+
+  //----------FILTROS-------------
+  const handlerFilter = (categ, index) => {
+    nav_arr = index;
+    dispatch(filterCateg(categ));
+    setCurrentPage(1);
+  };
+  const changeFilter = (e) => {
+    e.preventDefault();
+    setFiltro(e.target.value);
+    dispatch(filterCateg(e.target.value));
+    setFiltro("");
+    setCurrentPage(1);
+  };
+  //------------------------------------
+  const checkProduct = (producto) => {
+    return state_carrito.find((e) => e.id === producto.id) ? true : false;
+  };
+
+
+
+
+  
+
   return (
     <>
       <Head>
@@ -96,6 +98,7 @@ const Tienda = () => {
       </Head>
       <div className={styles.container}>
         <div className={styles.categorias}>
+          {/* Filtrado Desktop */}
           <h1>CATEGORÍAS </h1>
           <ul>
             {arr_categs.map((item, index) => (
@@ -109,6 +112,7 @@ const Tienda = () => {
               </li>
             ))}
           </ul>
+          {/* Filtrado Mobile */}
           <FormControl className={classes.formControl}>
             <InputLabel htmlFor="grouped-select">Categorías</InputLabel>
             <Select defaultValue="Todas" id="grouped-select"  onChange={changeFilter}  className={styles.select}> 
@@ -121,9 +125,9 @@ const Tienda = () => {
               </MenuItem>
             ))}
             </Select>
-          </FormControl>
-          
+          </FormControl>  
         </div>
+        
         <div className={styles.contRight}>
           <div className={styles.contCard}>
             {currentProduct
