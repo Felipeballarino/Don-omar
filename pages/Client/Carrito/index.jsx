@@ -37,6 +37,12 @@ const Carrito = () => {
   const [user, setUser] = useState({});
   const precioTotal = 0;
 
+  const [entrega, setEntrega] = useState({
+    horario: "",
+    direccion: "",
+    comentarios: "",
+  });
+
   useEffect(async () => {
     const session1 = await fetch(`/api/user/login?path=GET_USER`);
     if (session1) {
@@ -53,19 +59,37 @@ const Carrito = () => {
     dispatch(deleteCart(id));
   };
 
+  const Entrega = (e) => {
+    e.preventDefault();
+    setEntrega({ ...entrega, [e.target.name]: e.target.value });
+  };
+  const onChange = (e) => {
+    e.preventDefault();
+    setEntrega({
+      ...entrega,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const pedido = `
-  Hola mi pedido es:
-  ${state.map((d, i) => `${d.count} Kg de ${d.nombre} `)} `;
+  DATOS:
+  Email:${user.email}, 
+  Telefono: ${user.telefono},
+  Horarios:${entrega.horario},
+  Direccion:${entrega.direccion},
+  Comentarios:${entrega.comentarios}
+
+  Pedido:
+  ${state.map((d, i) => ` ${d.count} Kg de ${d.nombre} `)} 
+  `;
 
   const enviarPedido = () => {
-    // window.open(
-    //   `https://api.whatsapp.com/send?phone=543536570880&text=${pedido}`,
-    //   "_system"
-    // );
+    console.log(pedido);
     Swal.fire({
       icon: "success",
-      title: "Muchas gracias por su compra !",
+      title: "Su compra esta siendo procesada !",
       showConfirmButton: false,
+      timer: 1500
     });
     router.push(`/Client/Tienda`);
   };
@@ -118,8 +142,7 @@ const Carrito = () => {
             <div className={styles.boton}>
               {login ? (
                 <button onClick={handleOpen} className={styles.enviar}>
-                  <span className="material-icons">whatsapp</span>
-                  <p>Enviar pedido</p>
+                  <p>Confirmar Compra</p>
                 </button>
               ) : (
                 <Form i={0}></Form>
@@ -145,44 +168,93 @@ const Carrito = () => {
             component="h2"
             className={styles.titulo}
           >
-            CONFIRMAR PEDIDO
+            DATOS DE ENTREGA
           </Typography>
           <div className={styles.terminarPedido}>
-            {state.length ? (
-              state.map((d, i) => (
-                <ul className={styles.unidades} key={i}>
-                  <li className={styles.nombreImg}>
-                    <img src={d.img} alt="img" className={styles.imagen} />{" "}
-                    {d.nombre}
-                  </li>
-                  <li className={styles.cantidad}>{d.count} Kg</li>
-                  <li className={styles.precio}>${d.precio}</li>
-                  <li className={styles.eliminarEnvio}>
-                    <button onClick={() => eliminarCart(d.id)}>
-                      <i class="bx bxs-trash"></i>
-                    </button>
-                  </li>
-                </ul>
-              ))
-            ) : (
-              <span>Aun no hay productos en tu carrito</span>
-            )}
+            <form className={styles.formulario}>
+              <div className={styles.contInput}>
+                <label>Direccion</label>
+                <input
+                  onChange={onChange}
+                  name="direccion"
+                  type="text"
+                  placeholder="Ej:Magallanes 255"
+                />
+              </div>
+              <div className={styles.contInput}>
+                <label>Whatsapp de contacto</label>
+                <input
+                  onChange={onChange}
+                  type="text"
+                  placeholder="555555555"
+                  defaultValue={user.telefono}
+                />
+              </div>
+              <div className={styles.contInput}>
+                <label>Elige un horario</label>
+                <div className={styles.botonesHorario}>
+                  <button
+                    onClick={Entrega}
+                    value="09:00 - 12:00"
+                    name="horario"
+                    className={
+                      entrega.horario == "09:00 - 12:00"
+                        ? styles.horaActive
+                        : ""
+                    }
+                  >
+                    09:00 - 12:00
+                  </button>
+                  <button
+                    onClick={Entrega}
+                    value="12:00 - 15:00"
+                    name="horario"
+                    className={
+                      entrega.horario == "12:00 - 15:00"
+                        ? styles.horaActive
+                        : ""
+                    }
+                  >
+                    12:00 - 15:00
+                  </button>
+                  <button
+                    onClick={Entrega}
+                    value="15:00 - 18:00"
+                    name="horario"
+                    className={
+                      entrega.horario == "15:00 - 18:00"
+                        ? styles.horaActive
+                        : ""
+                    }
+                  >
+                    15:00 - 18:00
+                  </button>
+                </div>
+              </div>
+              <div className={styles.contInput}>
+                <label>¿Querés decirnos algo más sobre tu pedido?</label>
+                <input
+                  onChange={onChange}
+                  name="comentarios"
+                  type="text"
+                  placeholder="Ingresa un comentario"
+                />
+              </div>
+            </form>
+
             {state.length ? (
               <div>
-                <div className={styles.total}>
-                  <h1>Total ${total}</h1>
-                </div>
                 <button
                   className={styles.enviar}
                   onClick={() => {
                     enviarPedido();
                   }}
                 >
-                  Enviar Pedido
+                  Confirmar
                 </button>
               </div>
             ) : (
-              ""
+              <span>Aun no hay productos en tu carrito</span>
             )}
           </div>
         </Box>
@@ -192,3 +264,23 @@ const Carrito = () => {
 };
 
 export default Carrito;
+
+// {state.length ? (
+//   state.map((d, i) => (
+//     <ul className={styles.unidades} key={i}>
+//       <li className={styles.nombreImg}>
+//         <img src={d.img} alt="img" className={styles.imagen} />{" "}
+//         {d.nombre}
+//       </li>
+//       <li className={styles.cantidad}>{d.count} Kg</li>
+//       <li className={styles.precio}>${d.precio}</li>
+//       <li className={styles.eliminarEnvio}>
+//         <button onClick={() => eliminarCart(d.id)}>
+//           <i class="bx bxs-trash"></i>
+//         </button>
+//       </li>
+//     </ul>
+//   ))
+// ) : (
+//   <span>Aun no hay productos en tu carrito</span>
+// )}
